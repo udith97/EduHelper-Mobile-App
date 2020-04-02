@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/loginback"
     tools:context=".EditProfile">
 
     <ImageView
@@ -12,7 +12,6 @@
         android:layout_width="149dp"
         android:layout_height="127dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="@string/editProfileImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputPastpaperhead"
@@ -30,6 +29,7 @@
         android:ems="10"
         android:hint="@string/idNumber"
         android:inputType="textPersonName"
+        android:textColorHint="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -45,6 +45,7 @@
         android:layout_marginRight="60dp"
         android:ems="10"
         android:hint="@string/name"
+        android:textColorHint="@android:color/background_light"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +62,7 @@
         android:layout_marginRight="60dp"
         android:ems="10"
         android:hint="@string/email"
+        android:textColorHint="@android:color/background_light"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,6 +79,7 @@
         android:layout_marginRight="60dp"
         android:ems="10"
         android:hint="@string/faculty"
+        android:textColorHint="@android:color/background_light"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -94,6 +97,7 @@
         android:layout_marginRight="60dp"
         android:ems="10"
         android:hint="@string/year"
+        android:textColorHint="@android:color/background_light"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
