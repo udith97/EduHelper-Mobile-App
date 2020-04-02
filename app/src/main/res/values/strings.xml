@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">EduHelper</string>
+    <string name="editProfileDetails">Edit Profile Details</string>
+    <string name="announcements">Announcements</string>
+    <string name="timeTables">Time Tables</string>
+    <string name="pastPapers">Past Papers</string>
+    <string name="logout">Logout</string>
+    <string name="welcome">Welcome !</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="signin">Sign In</string>
+    <string name="goToRegister">No Account? Register.</string>
+    <string name="idNumber">ID Number</string>
+    <string name="name">Name</string>
+    <string name="faculty">Faculty</string>
+    <string name="year">Year</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Delete</string>
+    <string name="register">Register</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="goToLogin">Already Have An Account? Login.</string>
+    <string name="profile">Profile</string>
+    <string name="edit">Edit</string>
 </resources>
