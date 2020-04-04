@@ -165,7 +165,8 @@
         app:layout_constraintBottom_toTopOf="@+id/checkedTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.307"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="" />
 
     <CheckedTextView
         android:id="@+id/checkedTextView"
@@ -199,9 +200,11 @@
         android:layout_marginLeft="150dp"
         android:layout_marginEnd="150dp"
         android:layout_marginRight="150dp"
+        android:layout_marginBottom="48dp"
         android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="517dp" />
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

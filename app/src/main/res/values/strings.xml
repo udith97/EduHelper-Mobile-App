@@ -28,5 +28,5 @@
     <string name="txt_yr">Year</string>
     <string name="des">Description</string>
     <string name="browse_btn">Browse</string>
-    <string name="txt_des">Type your description</string>
+    <string name="txt_des">Type your description..</string>
 </resources>
