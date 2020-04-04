@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".new_announcement"></activity>
-        <activity android:name=".Announcement"></activity>
+        <activity android:name=".Edit_announcement"></activity>
+        <activity android:name=".new_announcement" />
+        <activity android:name=".Announcement" />
         <activity android:name=".EditProfile" />
         <activity android:name=".Login">
             <intent-filter>

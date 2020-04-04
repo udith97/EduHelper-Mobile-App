@@ -29,4 +29,6 @@
     <string name="des">Description</string>
     <string name="browse_btn">Browse</string>
     <string name="txt_des">Type your description..</string>
+    <string name="btn_clear">Clear</string>
+    <string name="btn_save">Save</string>
 </resources>
