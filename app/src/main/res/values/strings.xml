@@ -21,4 +21,12 @@
     <string name="goToLogin">Already Have An Account? Login.</string>
     <string name="profile">Profile</string>
     <string name="edit">Edit</string>
+    <string name="ttl">NEW ANNOUNCEMENT</string>
+    <string name="title">Title</string>
+    <string name="text_title">Enter your title</string>
+    <string name="text_fac">Faculty</string>
+    <string name="txt_yr">Year</string>
+    <string name="des">Description</string>
+    <string name="browse_btn">Browse</string>
+    <string name="txt_des">Type your description</string>
 </resources>
