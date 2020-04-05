@@ -31,4 +31,13 @@
     <string name="txt_des">Type your description..</string>
     <string name="btn_clear">Clear</string>
     <string name="btn_save">Save</string>
+    <string name="addtimetable">Add Timetable</string>
+    <string name="semester">Semester</string>
+    <string name="group">Group</string>
+    <string name="attachments">Attachments</string>
+    <string name="enterfaculty">Enter Faculty</string>
+    <string name="enteryear">Enter Year</string>
+    <string name="entersemester">Enter Semester</string>
+    <string name="entergroup">Enter Group</string>
+    <string name="visibleToStudents">"Visible to students   "</string>
 </resources>

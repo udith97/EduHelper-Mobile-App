@@ -1,14 +1,20 @@
 package com.example.eduhelper;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class Paper extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class AddTimetable extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_paper);
+        setContentView(R.layout.activity_add_timetable);
+
+
+
+
     }
 }
