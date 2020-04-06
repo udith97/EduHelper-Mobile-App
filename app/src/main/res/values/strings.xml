@@ -42,4 +42,8 @@
     <string name="visibleToStudents">"Visible to students   "</string>
     <string name="editTimetable">Edit Timetable</string>
     <string name="btn_saveChanges">Save changes</string>
+    <string name="addEvent">Add Event</string>
+    <string name="topic">Topic</string>
+    <string name="date">Date</string>
+    <string name="venue">Venue</string>
 </resources>
