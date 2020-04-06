@@ -40,4 +40,6 @@
     <string name="entersemester">Enter Semester</string>
     <string name="entergroup">Enter Group</string>
     <string name="visibleToStudents">"Visible to students   "</string>
+    <string name="editTimetable">Edit Timetable</string>
+    <string name="btn_saveChanges">Save changes</string>
 </resources>
