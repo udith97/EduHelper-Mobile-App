@@ -46,4 +46,5 @@
     <string name="topic">Topic</string>
     <string name="date">Date</string>
     <string name="venue">Venue</string>
+    <string name="ttl_ann">ANNOUNCEMENTS</string>
 </resources>
