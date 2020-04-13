@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bck2"
     android:orientation="vertical"
-    android:background="@drawable/bck"
     tools:context=".AddTimetable">
 
     <TextView
@@ -13,8 +13,9 @@
         android:layout_width="280dp"
         android:layout_height="43dp"
         android:background="#99141414"
-        android:text="@string/editTimetable"
+        android:gravity="center_horizontal"
         android:padding="5dp"
+        android:text="@string/editTimetable"
         android:textAlignment="center"
         android:textColor="#F3EFEF"
         android:textIsSelectable="false"
@@ -25,8 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.084"
-        android:gravity="center_horizontal" />
+        app:layout_constraintVertical_bias="0.084" />
 
     <EditText
         android:id="@+id/idNo"
