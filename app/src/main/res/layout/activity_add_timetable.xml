@@ -29,7 +29,7 @@
         app:layout_constraintVertical_bias="0.084" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/idNo"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="213dp"
         android:layout_height="42dp"
@@ -63,7 +63,7 @@
         app:layout_constraintVertical_bias="0.101" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="128dp"
@@ -74,7 +74,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/idNo"
         app:layout_constraintVertical_bias="0.091" />
 
     <TextView
@@ -94,7 +94,7 @@
         app:layout_constraintVertical_bias="0.079" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -104,7 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.293"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/name"
         app:layout_constraintVertical_bias="0.078" />
 
     <TextView
@@ -134,7 +134,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         app:layout_constraintVertical_bias="0.098" />
 
 
