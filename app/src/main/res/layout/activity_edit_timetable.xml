@@ -5,14 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bck"
     tools:context=".AddTimetable">
 
     <TextView
         android:id="@+id/txt2"
-        android:layout_width="265dp"
-        android:layout_height="66dp"
+        android:layout_width="280dp"
+        android:layout_height="43dp"
+        android:background="#99141414"
         android:text="@string/editTimetable"
-        android:textColor="#050505"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColor="#F3EFEF"
         android:textIsSelectable="false"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -21,7 +25,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.084" />
+        app:layout_constraintVertical_bias="0.084"
+        android:gravity="center_horizontal" />
 
     <EditText
         android:id="@+id/editText"
@@ -211,6 +216,7 @@
         android:layout_width="81dp"
         android:layout_height="32dp"
         android:text="@string/faculty"
+        android:textColor="#EFEBEB"
         android:textSize="18sp"
         android:textStyle="bold"
         app:fontFamily="@font/aclonica"

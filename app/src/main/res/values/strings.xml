@@ -47,4 +47,11 @@
     <string name="date">Date</string>
     <string name="venue">Venue</string>
     <string name="ttl_ann">ANNOUNCEMENTS</string>
+    <string name="moduleCode">Module Code</string>
+    <string name="btn_insertpaper">Insert Paper</string>
+    <string name="btn_EditPaper">Edit Paper</string>
+    <string name="head_insert_past_papers">Insert past papers</string>
+    <string name="exam">Exam</string>
+    <string name="ChooseFile">Choose File</string>
+    <string name="Edit_past_paper">Edit past paper</string>
 </resources>

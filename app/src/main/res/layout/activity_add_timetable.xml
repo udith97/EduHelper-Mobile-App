@@ -4,15 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+   android:background="@drawable/bck4"
     android:orientation="vertical"
     tools:context=".AddTimetable">
 
     <TextView
         android:id="@+id/txt2"
-        android:layout_width="265dp"
-        android:layout_height="66dp"
+        android:layout_width="263dp"
+        android:layout_height="50dp"
+        android:background="#99141414"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
         android:text="@string/addtimetable"
-        android:textColor="#050505"
+        android:textAlignment="center"
+        android:textColor="#F3EFEF"
         android:textIsSelectable="false"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -25,23 +30,27 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="213dp"
+        android:layout_height="42dp"
         android:ems="10"
+
         android:hint="@string/enterfaculty"
         android:inputType="textPersonName"
+        android:textColorHint="#c6efe5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.649"
+        app:layout_constraintHorizontal_bias="0.559"
         app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/txt2"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintVertical_bias="0.038" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="87dp"
         android:layout_height="46dp"
         android:text="@string/year"
+        android:textColor="#1f2221"
         android:textSize="18sp"
         android:textStyle="bold"
         app:fontFamily="@font/aclonica"
@@ -73,6 +82,7 @@
         android:layout_width="108dp"
         android:layout_height="48dp"
         android:text="@string/semester"
+        android:textColor="#1f2221"
         android:textSize="18sp"
         android:textStyle="bold"
         app:fontFamily="@font/aclonica"
@@ -102,6 +112,7 @@
         android:layout_width="92dp"
         android:layout_height="44dp"
         android:text="@string/group"
+        android:textColor="#1f2221"
         android:textSize="18sp"
         android:textStyle="bold"
         app:fontFamily="@font/aclonica"
@@ -147,6 +158,7 @@
         android:layout_width="141dp"
         android:layout_height="37dp"
         android:text="@string/attachments"
+        android:textColor="#1f2221"
         android:textSize="18sp"
         android:textStyle="bold"
         app:fontFamily="@font/aclonica"
@@ -160,14 +172,18 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="87dp"
-        android:layout_height="40dp"
+        android:layout_width="63dp"
+        android:layout_height="35dp"
+        android:background="@drawable/browse_button"
         android:text="@string/browse_btn"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.295"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/editText4"
-        app:layout_constraintVertical_bias="0.337" />
+        app:layout_constraintVertical_bias="0.323" />
 
     <Switch
         android:id="@+id/switch1"
@@ -187,6 +203,10 @@
         android:layout_width="248dp"
         android:layout_height="44dp"
         android:text="@string/submit"
+        android:textColor="@android:color/white"
+        android:background="@drawable/custom_button"
+        android:textSize="18sp"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.447"
@@ -201,6 +221,7 @@
         android:text="@string/faculty"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="#1f2221"
         app:fontFamily="@font/aclonica"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
