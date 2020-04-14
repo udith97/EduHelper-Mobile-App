@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bck2"
+    android:background="@drawable/bck4"
     android:orientation="vertical"
     tools:context=".AddTimetable">
 
@@ -49,7 +49,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:fontFamily="@font/aclonica"
-
+        android:textColor="#1f2221"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
@@ -77,6 +77,7 @@
         android:layout_width="108dp"
         android:layout_height="48dp"
         android:text="@string/semester"
+        android:textColor="#1f2221"
         android:textSize="18sp"
         android:textStyle="bold"
         app:fontFamily="@font/aclonica"
@@ -108,6 +109,7 @@
         android:text="@string/group"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="#1f2221"
         app:fontFamily="@font/aclonica"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -216,15 +218,15 @@
         android:layout_width="81dp"
         android:layout_height="32dp"
         android:text="@string/faculty"
-        android:textColor="#EFEBEB"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="#1f2221"
         app:fontFamily="@font/aclonica"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt2"
-        app:layout_constraintVertical_bias="0.063" />
+        app:layout_constraintVertical_bias="0.059" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

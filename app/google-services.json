@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "357472401662",
+    "firebase_url": "https://eduhelper-aaf2f.firebaseio.com",
+    "project_id": "eduhelper-aaf2f",
+    "storage_bucket": "eduhelper-aaf2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357472401662:android:00278c28e61905edc44daf",
+        "android_client_info": {
+          "package_name": "com.example.eduhelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "357472401662-svsv4mcessu9gtnu569lrha1npfcbqt4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoPxR8QNlPqihDPIRVP9pYag2fC8V3tQs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "357472401662-svsv4mcessu9gtnu569lrha1npfcbqt4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
