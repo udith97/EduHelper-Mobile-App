@@ -24,6 +24,7 @@
                 android:fontFamily="@font/krona_one"
                 android:text="@string/Edit_past_paper"
                 android:textAlignment="center"
+                android:textAllCaps="true"
                 android:textColor="@color/design_default_color_on_primary"
                 android:textSize="30sp" />
 
