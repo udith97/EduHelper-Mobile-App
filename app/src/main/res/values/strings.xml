@@ -54,4 +54,5 @@
     <string name="exam">Exam</string>
     <string name="ChooseFile">Choose File</string>
     <string name="Edit_past_paper">Edit past paper</string>
+    <string name="ListTimetables">Timetables</string>
 </resources>

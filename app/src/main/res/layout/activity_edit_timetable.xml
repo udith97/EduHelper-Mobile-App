@@ -30,16 +30,21 @@
 
     <EditText
         android:id="@+id/idNo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="213dp"
+        android:layout_height="42dp"
+        android:textAlignment="center"
+        android:background="@drawable/text_view"
+        android:textColorHint="#c6efe5"
         android:ems="10"
         android:hint="@string/enterfaculty"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toEndOf="@+id/textView15"
         app:layout_constraintTop_toBottomOf="@+id/txt2"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.04" />
 
     <TextView
         android:id="@+id/textView2"
@@ -59,8 +64,12 @@
 
     <EditText
         android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="213dp"
+        android:layout_height="43dp"
+        android:textAlignment="center"
+        android:background="@drawable/text_view"
+        android:textColorHint="#c6efe5"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_marginBottom="128dp"
         android:ems="10"
         android:hint="@string/enteryear"
@@ -90,9 +99,13 @@
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="213dp"
+        android:layout_height="43dp"
+        android:textAlignment="center"
         android:ems="10"
+        android:background="@drawable/text_view"
+        android:textColorHint="#c6efe5"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:hint="@string/entersemester"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -120,10 +133,14 @@
 
     <EditText
         android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="213dp"
+        android:layout_height="43dp"
+        android:textAlignment="center"
         android:ems="10"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:hint="@string/entergroup"
+        android:background="@drawable/text_view"
+        android:textColorHint="#c6efe5"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -153,6 +170,7 @@
         android:layout_width="141dp"
         android:layout_height="37dp"
         android:text="@string/attachments"
+        android:textColor="#1f2221"
         android:textSize="18sp"
         android:textStyle="bold"
         app:fontFamily="@font/aclonica"
@@ -166,15 +184,17 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="87dp"
-        android:layout_height="40dp"
+        android:layout_width="63dp"
+        android:layout_height="35dp"
+        android:background="@drawable/browse_button"
         android:text="@string/browse_btn"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/editText4"
-        app:layout_constraintVertical_bias="0.387" />
+        app:layout_constraintVertical_bias="0.356" />
 
     <Switch
         android:id="@+id/switch1"
@@ -193,19 +213,23 @@
         android:id="@+id/button2"
         android:layout_width="139dp"
         android:layout_height="40dp"
+        android:background="@drawable/custom_button"
         android:text="@string/btn_saveChanges"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.154"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/switch1"
-        app:layout_constraintVertical_bias="0.357" />
+        app:layout_constraintVertical_bias="0.506" />
 
     <Button
         android:id="@+id/button11"
         android:layout_width="139dp"
         android:layout_height="40dp"
         android:text="@string/delete"
+        android:textColor="@android:color/white"
+        android:background="@drawable/custom_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"

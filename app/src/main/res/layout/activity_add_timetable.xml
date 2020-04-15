@@ -49,7 +49,7 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="87dp"
-        android:layout_height="46dp"
+        android:layout_height="42dp"
         android:text="@string/year"
         android:textColor="#1f2221"
         android:textSize="18sp"
