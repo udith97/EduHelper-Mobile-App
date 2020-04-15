@@ -29,7 +29,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="25dp" />
+                android:layout_height="50dp" />
 
             <EditText
                 android:id="@+id/ep_year"
@@ -38,7 +38,8 @@
                 android:ems="10"
                 android:hint="@string/year"
                 android:inputType="textPersonName"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColorHint="@color/design_default_color_on_primary" />
 
             <Space
                 android:layout_width="match_parent"
@@ -51,7 +52,8 @@
                 android:ems="10"
                 android:hint="@string/semester"
                 android:inputType="textPersonName"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColorHint="@color/common_google_signin_btn_text_dark_default" />
 
             <Space
                 android:layout_width="match_parent"
@@ -64,7 +66,8 @@
                 android:ems="10"
                 android:hint="@string/moduleCode"
                 android:inputType="textPersonName"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColorHint="@color/common_google_signin_btn_text_dark_default" />
 
             <Space
                 android:layout_width="match_parent"
@@ -77,7 +80,8 @@
                 android:ems="10"
                 android:hint="@string/faculty"
                 android:inputType="textPersonName"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColorHint="@color/common_google_signin_btn_text_dark_default" />
 
             <Space
                 android:layout_width="match_parent"
@@ -90,7 +94,8 @@
                 android:ems="10"
                 android:hint="@string/exam"
                 android:inputType="textPersonName"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColorHint="@color/common_google_signin_btn_text_dark_default" />
 
             <Space
                 android:layout_width="match_parent"
@@ -98,11 +103,11 @@
 
             <WebView
                 android:layout_width="match_parent"
-                android:layout_height="250dp" />
+                android:layout_height="450dp" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="16dp" />
+                android:layout_height="80dp" />
 
             <Button
                 android:id="@+id/ep_save_btn"
@@ -120,9 +125,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/delete" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="16dp" />
+            <!--            <Space-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="16dp" />-->
 
         </LinearLayout>
     </ScrollView>
