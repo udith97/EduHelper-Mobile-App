@@ -34,8 +34,9 @@
         android:layout_width="213dp"
         android:layout_height="42dp"
         android:ems="10"
-
+        android:background="@drawable/text_view"
         android:hint="@string/enterfaculty"
+        android:textAlignment="center"
         android:inputType="textPersonName"
         android:textColorHint="#c6efe5"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,13 +49,12 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="87dp"
-        android:layout_height="46dp"
+        android:layout_height="42dp"
         android:text="@string/year"
         android:textColor="#1f2221"
         android:textSize="18sp"
         android:textStyle="bold"
         app:fontFamily="@font/aclonica"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
@@ -64,11 +64,14 @@
 
     <EditText
         android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="213dp"
+        android:layout_height="42dp"
         android:layout_marginBottom="128dp"
         android:ems="10"
         android:hint="@string/enteryear"
+        android:textAlignment="center"
+        android:background="@drawable/text_view"
+        android:textColorHint="#c6efe5"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,11 +98,14 @@
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="213dp"
+        android:layout_height="42dp"
         android:ems="10"
         android:hint="@string/entersemester"
+        android:textAlignment="center"
+        android:background="@drawable/text_view"
         android:inputType="textPersonName"
+        android:textColorHint="#c6efe5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.293"
@@ -125,11 +131,14 @@
 
     <EditText
         android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="213dp"
+        android:layout_height="42dp"
         android:ems="10"
         android:hint="@string/entergroup"
+        android:textAlignment="center"
+        android:background="@drawable/text_view"
         android:inputType="textPersonName"
+        android:textColorHint="#c6efe5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
@@ -176,14 +185,14 @@
         android:layout_height="35dp"
         android:background="@drawable/browse_button"
         android:text="@string/browse_btn"
-        android:textColor="@android:color/white"
         android:textAllCaps="false"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.295"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/editText4"
-        app:layout_constraintVertical_bias="0.323" />
+        app:layout_constraintVertical_bias="0.353" />
 
     <Switch
         android:id="@+id/switch1"
