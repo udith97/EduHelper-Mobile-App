@@ -1,31 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bck4"
-    tools:context=".ListTimetables">
+    android:orientation="vertical"
+    tools:context=".AddTimetable" >
 
-    <TextView
-        android:id="@+id/txt2"
-        android:layout_width="280dp"
-        android:layout_height="43dp"
-        android:background="#99141414"
-        android:gravity="center_horizontal"
-        android:padding="5dp"
-        android:text="@string/timeTables"
-        android:textAlignment="center"
-        android:textColor="#F3EFEF"
-        android:textIsSelectable="false"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:fontFamily="@font/aclonica"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.084" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="31dp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#99141414"
+                android:padding="5dp"
+                android:text="@string/timeTables"
+                android:textAlignment="center"
+                android:textColor="#F3EFEF"
+                android:textIsSelectable="false"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/aclonica" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
