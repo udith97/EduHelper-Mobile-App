@@ -54,4 +54,7 @@
     <string name="exam">Exam</string>
     <string name="ChooseFile">Choose File</string>
     <string name="Edit_past_paper">Edit past paper</string>
+    <string name="view_past_paper_heading" />
+    <string name="view_past_paper">VIEW PAST PAPER</string>
+    <string name="download">DOWNLOAD</string>
 </resources>
