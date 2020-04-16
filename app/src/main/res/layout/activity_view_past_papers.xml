@@ -1,90 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewPastPapers">
+    tools:context=".ViewPastPapers" >
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/pastPapers"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/year"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="125dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/PPyear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="102dp" />
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/background_dark"
+                android:text="@string/view_past_paper"
+                android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="36sp" />
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/moduleCode"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="179dp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
 
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/faculty"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="236dp" />
+            <EditText
+                android:id="@+id/vp_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:capitalize="none"
+                android:ems="10"
+                android:fontFamily="@font/coustard"
+                android:hint="@string/year"
+                android:inputType="textPersonName"
+                android:textAlignment="center" />
 
-    <EditText
-        android:id="@+id/ppmcode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="167dp" />
 
-    <EditText
-        android:id="@+id/ppfaculty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="234dp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
 
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_insertpaper"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="526dp" />
+            <EditText
+                android:id="@+id/vp_semester"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/coustard"
+                android:hint="@string/semester"
+                android:inputType="textPersonName"
+                android:textAlignment="center" />
 
-    <Button
-        android:id="@+id/button17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_EditPaper"
-        tools:layout_editor_absoluteX="274dp"
-        tools:layout_editor_absoluteY="522dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <EditText
+                android:id="@+id/vp_modulecode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/coustard"
+                android:hint="@string/moduleCode"
+                android:inputType="textPersonName"
+                android:textAlignment="center" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <EditText
+                android:id="@+id/vp_exam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/coustard"
+                android:hint="@string/exam"
+                android:inputType="textPersonName"
+                android:textAlignment="center" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <EditText
+                android:id="@+id/vp_faculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/coustard"
+                android:hint="@string/faculty"
+                android:inputType="textPersonName"
+                android:textAlignment="center" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <Button
+                android:id="@+id/vp_download_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/download" />
+
+            <Button
+                android:id="@+id/vp_edit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_EditPaper" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

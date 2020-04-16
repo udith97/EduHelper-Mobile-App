@@ -18,10 +18,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Register extends AppCompatActivity {
-    EditText rIdNo, rName, rEmail, rFaculty, rYear, rPassword, rConPassword;
+    EditText rIdNo, rName, rEmail, rFaculty, rPassword;
     Button rRegisterBtn;
     TextView rGoToLogin;
-    FirebaseAuth fAth;
+    FirebaseAuth fAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,15 +32,13 @@ public class Register extends AppCompatActivity {
         rName = findViewById(R.id.name);
         rEmail = findViewById(R.id.email);
         rFaculty = findViewById(R.id.faculty);
-        rYear = findViewById(R.id.year);
         rPassword = findViewById(R.id.password);
-        rConPassword = findViewById(R.id.conPassword);
         rRegisterBtn = findViewById(R.id.registerBtn);
         rGoToLogin = findViewById(R.id.goToLogin);
 
-        fAth = FirebaseAuth.getInstance();
+        fAuth = FirebaseAuth.getInstance();
 
-        if (fAth.getCurrentUser() != null){
+        if (fAuth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
         }
@@ -52,9 +50,7 @@ public class Register extends AppCompatActivity {
                 String name = rName.getText().toString().trim();
                 String email = rEmail.getText().toString().trim();
                 String faculty = rFaculty.getText().toString().trim();
-                String year = rYear.getText().toString().trim();
                 String password = rPassword.getText().toString().trim();
-                String conPassword = rConPassword.getText().toString().trim();
 
                 if(TextUtils.isEmpty(idNo)){
                     rIdNo.setError("ID Number is required.");
@@ -72,10 +68,6 @@ public class Register extends AppCompatActivity {
                     rFaculty.setError("Faculty is required.");
                     return;
                 }
-                if (TextUtils.isEmpty(year)){
-                    rYear.setError("Year is required.");
-                    return;
-                }
                 if (TextUtils.isEmpty(password)){
                     rPassword.setError("Password is required.");
                     return;
@@ -83,14 +75,11 @@ public class Register extends AppCompatActivity {
                     rPassword.setError("Password mus be greater than six characters.");
                     return;
                 }
-                if (password != conPassword){
-                    rConPassword.setError("Password not matched.");
-                    return;
-                }
+
 
                 //register the user in firebase
 
-                fAth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
@@ -102,6 +91,13 @@ public class Register extends AppCompatActivity {
                         }
                     }
                 });
+            }
+        });
+
+        rGoToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Login.class));
             }
         });
 

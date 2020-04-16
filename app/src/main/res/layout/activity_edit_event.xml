@@ -38,7 +38,7 @@
         android:textStyle="bold"
         app:fontFamily="@font/aclonica"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintTop_toBottomOf="@+id/goToRegister" />
 
     <EditText
         android:id="@+id/editText16"
