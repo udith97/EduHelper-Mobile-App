@@ -10,17 +10,17 @@ import android.widget.TextView;
 
 public class Marks_Calculation extends AppCompatActivity {
 
-  /*   private EditText num1;
+    private EditText num1;
      private EditText num2;
      private Button cal;
-     private TextView result;*/
+     private TextView result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_marks__calculation);
 
-   /*     num1 = (EditText) findViewById(R.id.ent1);
+      num1 = (EditText) findViewById(R.id.ent1);
         num2 = (EditText) findViewById(R.id.ent2);
         cal = (Button) findViewById(R.id.btncal);
         result = (TextView) findViewById(R.id.tvans);
@@ -37,7 +37,7 @@ public class Marks_Calculation extends AppCompatActivity {
 
 
             }
-        });*/
+        });
 
 
     }
