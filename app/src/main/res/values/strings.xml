@@ -23,10 +23,10 @@
     <string name="edit">Edit</string>
     <string name="ttl">NEW ANNOUNCEMENT</string>
     <string name="title">Title</string>
-    <string name="text_title">Enter your title</string>
-    <string name="text_fac">Faculty</string>
-    <string name="txt_yr">Year</string>
-    <string name="des">Description</string>
+    <string name="text_title" translatable="false">Enter your title</string>
+    <string name="text_fac" translatable="false">Faculty</string>
+    <string name="txt_yr" translatable="false">Year</string>
+    <string name="des" translatable="false">Description</string>
     <string name="browse_btn">Browse</string>
     <string name="txt_des">Type your description..</string>
     <string name="btn_clear">Clear</string>
@@ -58,4 +58,6 @@
     <string name="view_past_paper">VIEW PAST PAPER</string>
     <string name="download">DOWNLOAD</string>
     <string name="forgotPassword">Forgot Password</string>
+    <string name="ttl_edit">EDIT ANNOUNCEMENT</string>
+    <string name="attach">Attach your files..</string>
 </resources>
