@@ -1,4 +1,15 @@
 <resources>
+    <string name="modules">Spinner Exsample</string>
+
+    <string-array name="modules">
+        <item>Choose module</item>
+        <item>ITP</item>
+        <item>MAD</item>
+        <item>PS</item>
+        <item>DSA</item>
+    </string-array>
+
+
     <string name="app_name">EduHelper</string>
     <string name="editProfileDetails">Edit Profile Details</string>
     <string name="announcements">Announcements</string>
