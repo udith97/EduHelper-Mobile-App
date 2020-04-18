@@ -21,7 +21,15 @@
 
         <activity android:name=".ListTimetables" />
         <activity android:name=".Edit_Past_past_paper" />
-        <activity android:name=".Insert_P_Paper" />
+        <activity android:name=".Insert_P_Paper">
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
         <activity android:name=".ViewPastPapers" />
         <activity android:name=".EditTimetable" />
         <activity android:name=".AddTimetable" />
@@ -32,11 +40,11 @@
         <activity android:name=".Login" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Register">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
 
         <meta-data
