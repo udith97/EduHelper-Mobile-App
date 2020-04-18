@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Marks_Calculation"/>
-
         <activity android:name=".ListTimetables" />
         <activity android:name=".Edit_Past_past_paper" />
         <activity android:name=".Insert_P_Paper" />

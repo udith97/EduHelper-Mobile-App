@@ -38,7 +38,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="hint" />
+                        android:hint="@string/module_name" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Space
@@ -66,7 +66,7 @@
                     android:layout_marginLeft="60dp"
                     android:layout_marginRight="60dp"
                     android:ems="10"
-                    android:hint="@string/assigment_marks1"
+                    android:hint="@string/assignment_marks"
                     android:inputType="numberDecimal" />
 
                 <Space
