@@ -12,8 +12,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
 
 
 public class Insert_P_Paper extends AppCompatActivity {
@@ -48,6 +50,7 @@ public class Insert_P_Paper extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 rootNode = FirebaseDatabase.getInstance();
                 mDatabase = rootNode.getReference("pastPapers");
 
@@ -58,9 +61,15 @@ public class Insert_P_Paper extends AppCompatActivity {
                 String iexam = exam.getText().toString();
 
                 pastpaperHelper paperHelper = new pastpaperHelper(iyear, sem, mcode, ifac, iexam);
+                if(mDatabase != null ) {
+                    mDatabase.child(mcode).setValue(paperHelper);
+                    Toast.makeText(Insert_P_Paper.this,"Insert Successful", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), ViewPastPapers.class));
+                }
 
-                mDatabase.child(mcode).setValue(paperHelper);
-
+                else{
+                    Toast.makeText(Insert_P_Paper.this,"Insert Failed!", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -89,6 +98,9 @@ public class Insert_P_Paper extends AppCompatActivity {
         if(requestCode == PICK_IMG_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null){
 
             fileuri = data.getData();
+
+
+
 
 
         }
