@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Add_Lecturers"></activity>
+        <activity android:name=".timetablehelper"></activity>
+        <activity android:name=".Add_Lecturers" />
         <activity android:name=".Marks_Calculation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +31,13 @@
         </activity>
         <activity android:name=".ViewPastPapers" />
         <activity android:name=".EditTimetable" />
-        <activity android:name=".AddTimetable" />
+        <activity android:name=".AddTimetable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Edit_announcement" />
         <activity android:name=".new_announcement" />
         <activity android:name=".Announcement" />

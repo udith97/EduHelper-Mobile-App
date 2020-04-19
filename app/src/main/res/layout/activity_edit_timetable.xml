@@ -132,7 +132,7 @@
                 android:layout_height="5dp" />
 
             <Button
-                android:id="@+id/button20"
+                android:id="@+id/btn_browse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="70dp"
@@ -145,7 +145,7 @@
                 android:layout_height="23dp" />
 
             <Button
-                android:id="@+id/button21"
+                android:id="@+id/btn_submit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -159,7 +159,7 @@
                 android:layout_height="12dp" />
 
             <Button
-                android:id="@+id/button22"
+                android:id="@+id/clr_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"

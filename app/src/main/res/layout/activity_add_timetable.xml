@@ -46,6 +46,7 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/in1"
                     android:layout_width="354dp"
                     android:layout_height="44dp"
                     android:layout_marginLeft="30dp"
@@ -63,10 +64,11 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/in2"
                     android:layout_width="354dp"
                     android:layout_height="44dp"
-                    android:layout_marginRight="30dp"
                     android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
                     android:background="@drawable/text_view"
                     android:hint="@string/enteryear" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -80,12 +82,13 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/in3"
                     android:layout_width="354dp"
                     android:layout_height="44dp"
-                    android:background="@drawable/text_view"
-                    android:layout_marginRight="30dp"
                     android:layout_marginLeft="30dp"
-                    android:hint="@string/entersemester"/>
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/text_view"
+                    android:hint="@string/entersemester" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Space
@@ -97,11 +100,12 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/in4"
                     android:layout_width="354dp"
                     android:layout_height="44dp"
-                    android:background="@drawable/text_view"
-                    android:layout_marginRight="30dp"
                     android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/text_view"
                     android:hint="@string/entergroup" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -132,7 +136,7 @@
                 android:layout_height="5dp" />
 
             <Button
-                android:id="@+id/button20"
+                android:id="@+id/btn_browse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="70dp"
@@ -145,7 +149,7 @@
                 android:layout_height="23dp" />
 
             <Button
-                android:id="@+id/button21"
+                android:id="@+id/btn_submit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -159,7 +163,7 @@
                 android:layout_height="12dp" />
 
             <Button
-                android:id="@+id/button22"
+                android:id="@+id/clr_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
