@@ -76,4 +76,8 @@
     <string name="mid_marks">MID Marks</string>
     <string name="assignment_marks">Assignment Marks</string>
     <string name="btn_calculate">Calculate</string>
+    <string name="lecturers">Lecturers</string>
+    <string name="addLecturer">Add Lecturer</string>
+    <string name="location">Location</string>
+    <string name="contact_Number">Contact Number</string>
 </resources>
