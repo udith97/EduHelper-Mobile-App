@@ -145,7 +145,7 @@ tools:context=".Edit_announcement"
                     android:layout_height="21dp" />
 
                 <Button
-                    android:id="@+id/button17"
+                    android:id="@+id/browseBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="100dp"
@@ -159,7 +159,7 @@ tools:context=".Edit_announcement"
                     android:layout_height="17dp" />
 
                 <Button
-                    android:id="@+id/button18"
+                    android:id="@+id/submitBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50dp"

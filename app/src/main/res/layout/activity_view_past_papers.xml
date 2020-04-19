@@ -102,7 +102,7 @@
                 android:layout_height="50dp" />
 
             <Button
-                android:id="@+id/button17"
+                android:id="@+id/browseBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/submit" />
