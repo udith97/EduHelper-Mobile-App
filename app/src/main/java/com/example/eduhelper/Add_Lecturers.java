@@ -56,7 +56,7 @@ public class Add_Lecturers extends AppCompatActivity {
                 if (mDatabase != null) {
                     mDatabase.child(lname).setValue(lecHelper);
                     Toast.makeText(Add_Lecturers.this,"Insert Successful.", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(), Lecturers.class));
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 }else{
                     Toast.makeText(Add_Lecturers.this, "Error !", Toast.LENGTH_SHORT).show();
                 }

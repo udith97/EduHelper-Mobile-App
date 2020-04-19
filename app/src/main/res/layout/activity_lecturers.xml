@@ -35,9 +35,15 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <WebView
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="150dp" />
+                android:layout_height="30dp" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="109dp"
+                app:srcCompat="@android:drawable/sym_def_app_icon" />
 
             <Space
                 android:layout_width="match_parent"
@@ -116,6 +122,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
                 android:text="@string/edit" />
 
             <Space
@@ -128,6 +136,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
                 android:text="@string/delete" />
 
         </LinearLayout>
