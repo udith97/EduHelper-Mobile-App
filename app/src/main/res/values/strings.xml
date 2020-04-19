@@ -80,4 +80,6 @@
     <string name="addLecturer">Add Lecturer</string>
     <string name="location">Location</string>
     <string name="contact_Number">Contact Number</string>
+    <string name="chooseImage">Choose Image</string>
+    <string name="insertLecturer">Insert Lecturer</string>
 </resources>

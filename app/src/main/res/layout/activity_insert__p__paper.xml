@@ -106,6 +106,12 @@
                 android:layout_height="wrap_content"
                 android:text="@string/ChooseFile" />
 
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
             <Button
                 android:id="@+id/ipSubmit"
                 android:layout_width="match_parent"
