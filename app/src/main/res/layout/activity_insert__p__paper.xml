@@ -110,11 +110,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp" />
 
-            <ImageView
-                android:id="@+id/imageView7"
+            <TextView
+                android:id="@+id/textView14"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                />
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="55dp" />

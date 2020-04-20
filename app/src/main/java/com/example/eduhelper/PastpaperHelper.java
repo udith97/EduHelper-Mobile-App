@@ -8,6 +8,7 @@ public class PastpaperHelper {
     private String faculty;
     private String exam;
 
+
     public PastpaperHelper() {
     }
 
@@ -17,7 +18,10 @@ public class PastpaperHelper {
         ModuleCode = moduleCode;
         this.faculty = faculty;
         this.exam = exam;
+
     }
+
+
 
     public int getYear() {
         return year;
@@ -58,4 +62,6 @@ public class PastpaperHelper {
     public void setExam(String exam) {
         this.exam = exam;
     }
+
+
 }
