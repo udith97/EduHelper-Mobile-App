@@ -1,6 +1,6 @@
 package com.example.eduhelper;
 
-public class pastpaperHelper {
+public class PastpaperHelper {
 
     private int year;
     private int semester;
@@ -8,18 +8,16 @@ public class pastpaperHelper {
     private String faculty;
     private String exam;
 
-    public pastpaperHelper() {
+    public PastpaperHelper() {
     }
 
-    public pastpaperHelper(int year, int semester, String moduleCode, String faculty, String exam) {
+    public PastpaperHelper(int year, int semester, String moduleCode, String faculty, String exam) {
         this.year = year;
         this.semester = semester;
         ModuleCode = moduleCode;
         this.faculty = faculty;
         this.exam = exam;
     }
-
-
 
     public int getYear() {
         return year;

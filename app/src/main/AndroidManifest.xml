@@ -3,6 +3,8 @@
     package="com.example.eduhelper">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
     <application
         android:allowBackup="true"
@@ -16,6 +18,12 @@
         <activity android:name=".ListTimetables" />
         <activity android:name=".Edit_Past_past_paper" />
         <activity android:name=".Insert_P_Paper">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity android:name=".ViewPastPapers" />
