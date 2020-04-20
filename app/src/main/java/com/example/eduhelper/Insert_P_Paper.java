@@ -42,6 +42,10 @@ public class Insert_P_Paper extends AppCompatActivity {
     private FirebaseDatabase rootNode;
     private DatabaseReference mDatabase;
     private FirebaseStorage storage;
+    private static int docref = 0;
+    private static int inputref = 0;
+
+
 
 
     @Override
@@ -52,7 +56,7 @@ public class Insert_P_Paper extends AppCompatActivity {
 
         storage = FirebaseStorage.getInstance();
         rootNode = FirebaseDatabase.getInstance();
-        mDatabase = rootNode.getReference("pastPapers");
+
 
 
         year = findViewById(R.id.ip_year);
@@ -74,27 +78,8 @@ public class Insert_P_Paper extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-
-                int iyear = Integer.parseInt(year.getText().toString());
-                int sem = Integer.parseInt(semester.getText().toString());
-                String mcode = moduleCode.getText().toString();
-                String ifac = faculty.getText().toString();
-                String iexam = exam.getText().toString();
-
-                PastpaperHelper paperHelper = new PastpaperHelper(iyear, sem, mcode, ifac, iexam);
-                if(mDatabase != null ) {
-
-                    mDatabase.child(String.valueOf(iyear)).setValue(paperHelper);
-
-                    Toast.makeText(Insert_P_Paper.this,"Insert Successful", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(), ViewPastPapers.class));
-                }
-
-                else{
-                    Toast.makeText(Insert_P_Paper.this,"Insert Failed!", Toast.LENGTH_LONG).show();
-                }
+                inputref++;
+                inputText();
             }
         });
 
@@ -117,7 +102,7 @@ public class Insert_P_Paper extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(fileUri != null) {
-
+                    docref++;
                     uploadFile();
 
                 }
@@ -130,6 +115,35 @@ public class Insert_P_Paper extends AppCompatActivity {
 
 
     }
+
+
+    private void inputText(){
+        int iyear = Integer.parseInt(year.getText().toString());
+        int sem = Integer.parseInt(semester.getText().toString());
+        String mcode = moduleCode.getText().toString();
+        String ifac = faculty.getText().toString();
+        String iexam = exam.getText().toString();
+
+
+        PastpaperHelper paperHelper = new PastpaperHelper(iyear, sem, mcode, ifac, iexam);
+        mDatabase = rootNode.getReference("pastPapers");
+
+        if(mDatabase != null ) {
+
+            mDatabase.child(String.valueOf(inputref)).setValue(paperHelper);
+
+            Toast.makeText(Insert_P_Paper.this,"Insert Successful", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(getApplicationContext(), ViewPastPapers.class));
+        }
+
+        else{
+            Toast.makeText(Insert_P_Paper.this,"Insert Failed!", Toast.LENGTH_LONG).show();
+        }
+
+
+    }
+
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode,  String[] permissions, int[] grantResults) {
@@ -152,29 +166,37 @@ public class Insert_P_Paper extends AppCompatActivity {
 
     private void uploadFile(){
 
+
+
+
+
         progressDialog =new ProgressDialog(this);
         progressDialog.setProgressStyle(progressDialog.STYLE_HORIZONTAL);
         progressDialog.setTitle("Uploading file..");
         progressDialog.setProgress(0);
         progressDialog.show();
+//        System.currentTimeMillis()+""
 
-        final String fileName = System.currentTimeMillis()+"";
+        final int fileName = docref;
         StorageReference storageReference = storage.getReference();
-        storageReference.child("Past_Papers").child(fileName).putFile(fileUri)
+        storageReference.child("Past_Papers").child(String.valueOf(fileName)).putFile(fileUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                       String url = taskSnapshot.getUploadSessionUri().toString();
+
                       mDatabase = rootNode.getReference();
 
-                      mDatabase.child(fileName).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
-                          @Override
+
+
+                      mDatabase.child("PastPaperlinks").child(String.valueOf(fileName)).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
                           public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()){
-                                    Toast.makeText(Insert_P_Paper.this, "File successfully Uploaded",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Insert_P_Paper.this, "File successfully Submitted",Toast.LENGTH_SHORT).show();
                                 }
                                 else{
-                                    Toast.makeText(Insert_P_Paper.this, "File Upload Failed", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Insert_P_Paper.this, "File submission failed", Toast.LENGTH_SHORT).show();
                                 }
                           }
                       });
@@ -189,9 +211,16 @@ public class Insert_P_Paper extends AppCompatActivity {
         }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
-                int currentProgress = (int) (100*taskSnapshot.getBytesTransferred()/taskSnapshot.getTotalByteCount());
+                int currentProgress = (int) (100 * taskSnapshot.getBytesTransferred() / taskSnapshot.getTotalByteCount());
                 progressDialog.setProgress(currentProgress);
             }
+
+
+
+
+
+
+
         });
     }
 
