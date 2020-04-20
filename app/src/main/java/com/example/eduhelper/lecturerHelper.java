@@ -7,6 +7,7 @@ public class lecturerHelper {
     private String location;
     private String  email;
     private String contact;
+    //private String image;
 
     public lecturerHelper() {
     }
@@ -17,6 +18,7 @@ public class lecturerHelper {
         this.location = location;
         this.email = email;
         this.contact = contact;
+
     }
 
     public String getName() {
@@ -58,4 +60,12 @@ public class lecturerHelper {
     public void setContact(String contact) {
         this.contact = contact;
     }
+
+//    public String getImage() {
+//        return image;
+//    }
+//
+//    public void setImage(String image) {
+//        this.image = image;
+//    }
 }
