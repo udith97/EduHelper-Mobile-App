@@ -1,6 +1,8 @@
 package com.example.eduhelper;
 
 
+import android.app.ProgressDialog;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,25 +13,34 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
 
 public class AddTimetable extends AppCompatActivity {
 
 
-    //private static final int PICK_IMG_REQUEST = 1;
+    private static final int PICK_IMG_REQUEST = 1;
 
     private EditText faculty, year, semester, group;
-    private Button submit, choosefile;
+    private Button submit, choosefile, upload;
 
-    //private Uri fileuri;
+    private Uri fileuri;
+    private ProgressDialog progressDialog;
 
     private FirebaseDatabase rootNode;
     private DatabaseReference mDatabase;
+    private FirebaseStorage storage;
+    private static int docref = 0;
+    private static int inputref = 0;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_timetable);
+
+        storage = FirebaseStorage.getInstance();
+        rootNode = FirebaseDatabase.getInstance();
+
 
         faculty = findViewById(R.id.in1);
         year = findViewById(R.id.in2);
@@ -38,6 +49,8 @@ public class AddTimetable extends AppCompatActivity {
 
         submit = findViewById(R.id.btn_submit);
         choosefile = findViewById(R.id.btn_browse);
+        upload = findViewById(R.id.btn_confirm);
+
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override

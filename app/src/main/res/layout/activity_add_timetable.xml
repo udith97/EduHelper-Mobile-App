@@ -146,6 +146,19 @@
 
             <Space
                 android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="65dp"
+                android:background="@drawable/browse_button"
+                android:text="@string/btn_confirm" />
+
+            <Space
+                android:layout_width="match_parent"
                 android:layout_height="23dp" />
 
             <Button
