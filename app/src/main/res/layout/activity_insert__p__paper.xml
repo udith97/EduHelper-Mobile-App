@@ -101,36 +101,38 @@
                 android:layout_height="55dp" />
 
             <Button
-                android:id="@+id/ip_choosefile_btn"
+                android:id="@+id/ipSubmit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/ChooseFile" />
+                android:text="@string/submit" />
 
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="55dp" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/ip_showtext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:textAlignment="center"
+                android:textSize="24sp" />
 
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="55dp" />
 
             <Button
+                android:id="@+id/ip_choosefile_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ChooseFile" />
+
+            <Button
                 android:id="@+id/ipupload"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/confim" />
+                android:text="@string/upload" />
 
-            <Button
-                android:id="@+id/ipSubmit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/submit" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
