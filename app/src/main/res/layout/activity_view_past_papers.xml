@@ -23,8 +23,8 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_margin="25dp"
-        android:padding="10dp"
-        android:queryHint="@string/search" />
+        android:padding="10dp"/>
+<!--        android:queryHint="@string/search" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vppviewR"
