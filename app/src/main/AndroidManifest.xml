@@ -30,7 +30,14 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
-        <activity android:name=".ViewPastPapers" />
+        <activity android:name=".ViewPastPapers">
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".EditTimetable" />
         <activity android:name=".AddTimetable" />
         <activity android:name=".Edit_announcement" />

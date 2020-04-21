@@ -11,38 +11,37 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InputPPFirebaseHelper {
+public class InputFirebasePastPaperHelper {
 
-    private FirebaseDatabase finstance;
-    private DatabaseReference mDatabase;
-    private List<PastpaperHelper> papers = new ArrayList<>();
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
+    private List<PastpaperHelper> paper = new ArrayList<>();
+
 
     public interface DataStatus{
         void DataLoaded(List<PastpaperHelper> papers, List<String> keys);
         void DataUpdated();
         void DataDeleted();
-        void DataInserted();
     }
 
-
-    public InputPPFirebaseHelper(){
-        finstance = FirebaseDatabase.getInstance();
-        mDatabase = finstance.getReference("pastPapers");
+    public InputFirebasePastPaperHelper() {
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("pastPapers");
     }
 
     public void readPastPapers(final DataStatus dataStatus){
-
-        mDatabase.addValueEventListener(new ValueEventListener() {
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-            papers.clear();
-            List<String> keys = new ArrayList();
-            for(DataSnapshot keyNode : dataSnapshot.getChildren()){
-                keys.add(keyNode.getKey());
-                PastpaperHelper pastpaper = keyNode.getValue(PastpaperHelper.class);
-                papers.add(pastpaper);
-            }
-               dataStatus.DataLoaded(papers,keys);
+                paper.clear();
+                List<String> keys = new ArrayList<>();
+                for (DataSnapshot keyNode: dataSnapshot.getChildren()){
+                    keys.add(keyNode.getKey());
+                    PastpaperHelper pPaper = keyNode.getValue(PastpaperHelper.class);
+                    paper.add(pPaper);
+                }
+
+                dataStatus.DataLoaded(paper,keys);
             }
 
             @Override
@@ -50,7 +49,7 @@ public class InputPPFirebaseHelper {
 
             }
         });
-
     }
+
 
 }

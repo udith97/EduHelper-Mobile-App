@@ -83,4 +83,6 @@
     <string name="chooseImage">Choose Image</string>
     <string name="insertLecturer">Insert Lecturer</string>
     <string name="confim">CONFIRM</string>
+    <string name="upload">UPLOAD FILE</string>
+    <string name="search">SEARCH</string>
 </resources>
