@@ -26,7 +26,6 @@
     <string name="faculty">Faculty</string>
     <string name="year">Year</string>
     <string name="submit">Submit</string>
-    <string name="delete">Delete</string>
     <string name="register">Register</string>
     <string name="confirmPassword">Confirm Password</string>
     <string name="goToLogin">Already Have An Account? Login.</string>
@@ -85,4 +84,6 @@
     <string name="confim">CONFIRM</string>
     <string name="btn_confirm">Confirm</string>
     <string name="upload">FILE UPLOAD</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
 </resources>
