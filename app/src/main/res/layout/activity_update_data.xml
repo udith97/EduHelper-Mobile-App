@@ -25,17 +25,6 @@
                 android:layout_height="20dp"
                 android:layout_alignParentTop="true" />
 
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/aclonica"
-                android:text="@string/addLecturer"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
@@ -47,7 +36,7 @@
                 android:layout_centerHorizontal="true">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/name"
+                    android:id="@+id/ename"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
@@ -68,7 +57,7 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/moduleCode"
+                    android:id="@+id/emoduleCode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/moduleCode"
@@ -89,7 +78,7 @@
                 android:layout_centerHorizontal="true">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/location"
+                    android:id="@+id/elocation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
@@ -109,7 +98,7 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/email"
+                    android:id="@+id/eemail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
@@ -129,7 +118,7 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/contactNumber"
+                    android:id="@+id/econtactNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
@@ -144,25 +133,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp" />
 
-            <Button
-                android:id="@+id/chooseImage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
-                android:layout_marginRight="70dp"
-                android:text="@string/chooseImage" />
-
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />
 
             <Button
-                android:id="@+id/insertLecturer"
+                android:id="@+id/update"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="70dp"
                 android:layout_marginRight="70dp"
-                android:text="@string/insertLecturer" />
+                android:text="@string/update" />
 
 
         </LinearLayout>
