@@ -1,50 +1,30 @@
 package com.example.eduhelper;
 
 public class PastpaperHelper {
-
-    private int year;
-    private int semester;
-    private String ModuleCode;
+    private String year;
     private String faculty;
+    private String moduleCode;
     private String exam;
+    private String semester;
 
 
     public PastpaperHelper() {
     }
 
-    public PastpaperHelper(int year, int semester, String moduleCode, String faculty, String exam) {
+    public PastpaperHelper(String year, String faculty, String moduleCode, String exam, String semester) {
         this.year = year;
-        this.semester = semester;
-        ModuleCode = moduleCode;
         this.faculty = faculty;
+        this.moduleCode = moduleCode;
         this.exam = exam;
-
+        this.semester = semester;
     }
 
-
-
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
-    }
-
-    public int getSemester() {
-        return semester;
-    }
-
-    public void setSemester(int semester) {
-        this.semester = semester;
-    }
-
-    public String getModuleCode() {
-        return ModuleCode;
-    }
-
-    public void setModuleCode(String moduleCode) {
-        ModuleCode = moduleCode;
     }
 
     public String getFaculty() {
@@ -55,6 +35,14 @@ public class PastpaperHelper {
         this.faculty = faculty;
     }
 
+    public String getModuleCode() {
+        return moduleCode;
+    }
+
+    public void setModuleCode(String moduleCode) {
+        this.moduleCode = moduleCode;
+    }
+
     public String getExam() {
         return exam;
     }
@@ -63,5 +51,11 @@ public class PastpaperHelper {
         this.exam = exam;
     }
 
+    public String getSemester() {
+        return semester;
+    }
 
+    public void setSemester(String semester) {
+        this.semester = semester;
+    }
 }
