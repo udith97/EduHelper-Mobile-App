@@ -20,6 +20,7 @@
         android:layout_height="480dp" />
 
     <Button
+        android:id="@+id/redirectbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
