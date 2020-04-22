@@ -138,15 +138,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="10dp" />
 
-                <WebView
+                <TextView
+                    android:id="@+id/txtview"
                     android:layout_width="match_parent"
-                    android:layout_height="126dp"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginRight="50dp" />
+                    android:layout_height="wrap_content" />
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="21dp" />
+                    android:layout_height="10dp" />
 
                 <Button
                     android:id="@+id/browseBtn"
@@ -163,6 +162,21 @@
                     android:layout_height="17dp" />
 
                 <Button
+                    android:id="@+id/confirmBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="100dp"
+                    android:background="#DCF8FA"
+                    android:text="@string/btn_confirm"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/aclonica" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="19dp" />
+
+                <Button
                     android:id="@+id/submitBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -175,6 +189,21 @@
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="17dp" />
+
+                <Button
+                    android:id="@+id/clearBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="#DCF8FA"
+                    android:text="@string/btn_clear"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/aclonica" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp" />
 
             </LinearLayout>
         </ScrollView>
