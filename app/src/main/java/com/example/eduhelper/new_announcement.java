@@ -49,7 +49,7 @@ public class new_announcement extends AppCompatActivity {
                 mDatabase = rootNode.getReference("announcement");
 
                 String annTitle = title.getText().toString();
-                int annYear = Integer.parseInt(year.getText().toString());
+                String annYear = year.getText().toString();
                 String annFac = faculty.getText().toString();
                 String annDes = description.getText().toString();
 
