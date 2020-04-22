@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="-1dp"
         android:layout_marginTop="3dp"
-        android:background="@drawable/background02">
+        android:background="@drawable/lecturer_back">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,13 +36,13 @@
                 android:layout_centerHorizontal="true">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ename"
+                    android:id="@+id/tm_faculty"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:fontFamily="@font/aclonica"
-                    android:hint="@string/name"
+                    android:hint="@string/faculty"
                     android:textAllCaps="false"
                     android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -57,10 +57,10 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/emoduleCode"
+                    android:id="@+id/tm_year"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/moduleCode"
+                    android:hint="@string/year"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:fontFamily="@font/aclonica"
@@ -78,13 +78,13 @@
                 android:layout_centerHorizontal="true">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/elocation"
+                    android:id="@+id/tm_semester"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:fontFamily="@font/aclonica"
-                    android:hint="@string/location"
+                    android:hint="@string/semester"
                     android:textStyle="bold"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -98,13 +98,13 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/eemail"
+                    android:id="@+id/tm_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:fontFamily="@font/aclonica"
-                    android:hint="@string/email"
+                    android:hint="@string/group"
                     android:textStyle="bold"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -115,19 +115,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/econtactNumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:fontFamily="@font/aclonica"
-                    android:hint="@string/contact_Number"
-                    android:inputType="textPersonName"
-                    android:textStyle="bold"/>
-            </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="match_parent"/>
 
             <Space
                 android:layout_width="match_parent"

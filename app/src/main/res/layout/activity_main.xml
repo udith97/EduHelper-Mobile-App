@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loginback"
+    android:background="@drawable/background5"
     tools:context=".MainActivity" >
 
     <ScrollView
@@ -32,6 +32,7 @@
                 android:layout_marginRight="60dp"
                 android:textStyle="bold"
                 android:textSize="20sp"
+                android:background="@drawable/custom_button"
                 android:fontFamily="@font/aclonica"
                 android:text="@string/lecturers" />
 
@@ -47,6 +48,7 @@
                 android:layout_marginRight="60dp"
                 android:textStyle="bold"
                 android:textSize="20sp"
+                android:background="@drawable/custom_button"
                 android:fontFamily="@font/aclonica"
                 android:text="@string/announcements" />
 
@@ -62,6 +64,7 @@
                 android:layout_marginRight="60dp"
                 android:textStyle="bold"
                 android:textSize="20sp"
+                android:background="@drawable/custom_button"
                 android:fontFamily="@font/aclonica"
                 android:text="@string/pastPapers" />
 
@@ -77,6 +80,7 @@
                 android:layout_marginRight="60dp"
                 android:textStyle="bold"
                 android:textSize="20sp"
+                android:background="@drawable/custom_button"
                 android:fontFamily="@font/aclonica"
                 android:text="@string/timeTables" />
 
@@ -91,6 +95,7 @@
                 android:layout_centerHorizontal="true"
                 android:onClick="logout"
                 android:fontFamily="@font/aclonica"
+                android:background="@drawable/browse_button"
                 android:layout_marginLeft="100dp"
                 android:layout_marginRight="100dp"
                 android:text="@string/logout" />
