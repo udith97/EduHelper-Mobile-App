@@ -43,7 +43,7 @@ public class Insert_P_Paper extends AppCompatActivity {
     private FirebaseDatabase rootNode;
     private DatabaseReference mDatabase;
     private FirebaseStorage storage;
-    private static int ref;
+    private static String ref;
 
 
 
@@ -117,8 +117,8 @@ public class Insert_P_Paper extends AppCompatActivity {
 
 
     private void inputText(){
-        int iyear = Integer.parseInt(year.getText().toString());
-        int sem = Integer.parseInt(semester.getText().toString());
+        String iyear = year.getText().toString();
+        String sem = semester.getText().toString();
         String mcode = moduleCode.getText().toString();
         String ifac = faculty.getText().toString();
         String iexam = exam.getText().toString();
@@ -132,7 +132,7 @@ public class Insert_P_Paper extends AppCompatActivity {
 
         if(mDatabase != null ) {
 
-            mDatabase.child(String.valueOf(iyear)).setValue(paperHelper);
+            mDatabase.child(iyear).setValue(paperHelper);
 
             Toast.makeText(Insert_P_Paper.this,"Insert Successful", Toast.LENGTH_SHORT).show();
 //            startActivity(new Intent(getApplicationContext(), ViewPastPapers.class));

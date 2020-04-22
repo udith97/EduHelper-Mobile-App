@@ -17,39 +17,39 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class LecturerAdapterClass extends RecyclerView.Adapter<LecturerAdapterClass.MyViewHolder>{
+public class TimetableAdapterClass extends RecyclerView.Adapter<TimetableAdapterClass.MyViewHolder>{
 
+    private final ArrayList<timetablehelper> thelper;
     private Context context;
     private ArrayList<lecturerHelper> lecHelper;
 
-    public LecturerAdapterClass(Context c,ArrayList<lecturerHelper> lecHelper){
+    public TimetableAdapterClass(Context c,ArrayList<timetablehelper> thelper){
         this.context = c;
-        this.lecHelper = lecHelper;
+        this.thelper = thelper;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lecturer_card_holder,parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.timetable_card_holder,parent, false);
 
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        final lecturerHelper lecHelper = this.lecHelper.get(position);
-        holder.viewName.setText(lecHelper.getName());
-        holder.viewMCode.setText(lecHelper.getModuleCode());
-        holder.viewLoc.setText(lecHelper.getLocation());
-        holder.viewMail.setText(lecHelper.getEmail());
-        holder.viewCont.setText(lecHelper.getContact());
+        final timetablehelper thelper = this.thelper.get(position);
+        holder.viewFaculty.setText(thelper.getTfaculty());
+        holder.viewYear.setText(thelper.getTyear());
+        holder.viewSemester.setText(thelper.getTsemester());
+        holder.viewGroup.setText(thelper.getTgroup());
 
         holder.DeleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("lecturer").child(lecHelper.getName());
+                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("timetables").child(thelper.getTyear());
                 databaseReference.removeValue();
-                Toast.makeText(context, "Lecturer Deleted.",Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Timetable Deleted.",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -57,11 +57,10 @@ public class LecturerAdapterClass extends RecyclerView.Adapter<LecturerAdapterCl
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(),UpdateData.class);
-                i.putExtra("lname",lecHelper.getName());
-                i.putExtra("lmoduleCode",lecHelper.getModuleCode());
-                i.putExtra("llocation",lecHelper.getLocation());
-                i.putExtra("lemail",lecHelper.getEmail());
-                i.putExtra("lcontactNumber",lecHelper.getContact());
+                i.putExtra("tfaculty",thelper.getTfaculty());
+                i.putExtra("tyear",thelper.getTyear());
+                i.putExtra("tsemester",thelper.getTsemester());
+                i.putExtra("tgroup",thelper.getTgroup());
                 v.getContext().startActivity(i);
 
             }
@@ -69,20 +68,17 @@ public class LecturerAdapterClass extends RecyclerView.Adapter<LecturerAdapterCl
     }
 
     @Override
-    public int getItemCount() {
-        return lecHelper.size();
-    }
+    public int getItemCount() {return thelper.size(); }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView viewName, viewMCode, viewLoc, viewMail, viewCont;
+        TextView viewFaculty, viewYear, viewSemester, viewGroup;
         Button DeleteBtn, UpdateBtn;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            viewName = itemView.findViewById(R.id.lecname);
-            viewMCode = itemView.findViewById(R.id.mcode);
-            viewLoc = itemView.findViewById(R.id.loc);
-            viewMail = itemView.findViewById(R.id.mail);
-            viewCont = itemView.findViewById(R.id.cont);
+            viewFaculty = itemView.findViewById(R.id.s1);
+            viewYear = itemView.findViewById(R.id.s2);
+            viewSemester = itemView.findViewById(R.id.s3);
+            viewGroup = itemView.findViewById(R.id.s4);
             DeleteBtn = itemView.findViewById(R.id.deleteBtn);
             UpdateBtn = itemView.findViewById(R.id.updateBtn);
 

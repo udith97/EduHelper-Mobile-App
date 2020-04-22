@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DatabaseReference;
@@ -115,12 +114,12 @@ public class Add_Lecturers extends AppCompatActivity {
 
 
 
-        chooseImageBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                OpenImageChooser();
-            }
-        });
+//        chooseImageBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                OpenImageChooser();
+//            }
+//        });
     }
 
 //    private void uploadDataToFirebase() {
@@ -172,21 +171,21 @@ public class Add_Lecturers extends AppCompatActivity {
 //
 //    }
 
-    private void OpenImageChooser() {
-        Intent intent = new Intent();
-
-        intent.setType("image/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(intent,PICK_IMG_REQUEST);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if(requestCode == PICK_IMG_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null){
-
-            fileuri = data.getData();
-        }
-    }
+//    private void OpenImageChooser() {
+//        Intent intent = new Intent();
+//
+//        intent.setType("image/*");
+//        intent.setAction(Intent.ACTION_GET_CONTENT);
+//        startActivityForResult(intent,PICK_IMG_REQUEST);
+//    }
+//
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//
+//        if(requestCode == PICK_IMG_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null){
+//
+//            fileuri = data.getData();
+//        }
+//    }
 }
