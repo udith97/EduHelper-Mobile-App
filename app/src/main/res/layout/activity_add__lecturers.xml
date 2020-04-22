@@ -144,14 +144,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp" />
 
-            <Button
-                android:id="@+id/chooseImage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
-                android:layout_marginRight="70dp"
-                android:text="@string/chooseImage" />
-
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />
