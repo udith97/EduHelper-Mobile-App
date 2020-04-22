@@ -19,9 +19,9 @@ import java.util.ArrayList;
 
 public class TimetableAdapterClass extends RecyclerView.Adapter<TimetableAdapterClass.MyViewHolder>{
 
-    private final ArrayList<timetablehelper> thelper;
+    private ArrayList<timetablehelper> thelper;
     private Context context;
-    private ArrayList<lecturerHelper> lecHelper;
+
 
     public TimetableAdapterClass(Context c,ArrayList<timetablehelper> thelper){
         this.context = c;
@@ -56,7 +56,7 @@ public class TimetableAdapterClass extends RecyclerView.Adapter<TimetableAdapter
         holder.UpdateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(),UpdateData.class);
+                Intent i = new Intent(v.getContext(),UpdateDataTimetable.class);
                 i.putExtra("tfaculty",thelper.getTfaculty());
                 i.putExtra("tyear",thelper.getTyear());
                 i.putExtra("tsemester",thelper.getTsemester());
