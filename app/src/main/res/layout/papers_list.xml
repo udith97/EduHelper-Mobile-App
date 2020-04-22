@@ -13,7 +13,7 @@
         card_view:cardElevation="4dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -145,6 +145,35 @@
                     android:padding="5dp"
                     android:textStyle="bold"
                     android:textSize="16dp"/>
+
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+                <Button
+                    android:id="@+id/vdeletebtn"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="DELETE"
+                    android:background="#000"
+                    android:layout_marginRight="15dp"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"/>
+
+
+                <Button
+                    android:id="@+id/vupdate"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="UPDATE"
+                    android:background="#000"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"/>
 
             </LinearLayout>
 

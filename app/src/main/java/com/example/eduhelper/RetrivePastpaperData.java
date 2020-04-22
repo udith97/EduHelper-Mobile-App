@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,6 +23,7 @@ public class RetrivePastpaperData extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ArrayList<PastpaperHelper> paperdata;
     private PaperAdapter paperAdapter;
+    private Button inputredirect;
 
     DatabaseReference dref;
 
@@ -31,9 +35,19 @@ public class RetrivePastpaperData extends AppCompatActivity {
         recyclerView = findViewById(R.id.recu);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         paperdata = new ArrayList<PastpaperHelper>();
+        inputredirect = findViewById(R.id.redirectbtn);
 
         dref = FirebaseDatabase.getInstance().getReference().child("pastPapers");
         dref.addListenerForSingleValueEvent(valueEventListener);
+
+
+        inputredirect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Insert_P_Paper.class));
+            }
+        });
+
     }
 
     ValueEventListener valueEventListener = new ValueEventListener() {

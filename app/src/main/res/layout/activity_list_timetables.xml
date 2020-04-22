@@ -19,7 +19,13 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="494dp"
         android:layout_margin="5dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <Button
+        android:id="@+id/btn_ins"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_inserttimetable" />
 </LinearLayout>
