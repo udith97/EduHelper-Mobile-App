@@ -58,6 +58,7 @@ public class UpdateData extends AppCompatActivity {
                 lecturerHelper lecturerHelper = new lecturerHelper(uname, umoduleCode, ulocation, uemail, ucontact);
                 databaseReference.setValue(lecturerHelper);
                 Toast.makeText(UpdateData.this,"Lecturer Updated.",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), List_Lecturers.class));
             }
         });
 

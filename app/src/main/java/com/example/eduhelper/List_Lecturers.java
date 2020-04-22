@@ -1,6 +1,9 @@
 package com.example.eduhelper;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
@@ -16,19 +19,20 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class List_Lecturers extends AppCompatActivity {
+public class List_Lecturers<searchView> extends AppCompatActivity {
     DatabaseReference ref;
     private ArrayList<lecturerHelper> lecHelper;
     private  RecyclerView recyclerView;
     private LecturerAdapterClass lecturerAdapterClass;
-    SearchView searchView;
+    private Button GoToInsert;
+    private SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list__lecturers);
-
-
+        searchView = findViewById(R.id.searchView);
+        GoToInsert = findViewById(R.id.goToInsertLecturer);
        recyclerView = findViewById(R.id.rv);
        recyclerView.setLayoutManager(new LinearLayoutManager(this));
        lecHelper = new ArrayList<lecturerHelper>();
@@ -37,6 +41,13 @@ public class List_Lecturers extends AppCompatActivity {
         ref.addListenerForSingleValueEvent(valueEventListener);
 
        searchView = findViewById(R.id.searchView);
+
+        GoToInsert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Add_Lecturers.class));
+            }
+        });
     }
 
     ValueEventListener valueEventListener = new ValueEventListener() {

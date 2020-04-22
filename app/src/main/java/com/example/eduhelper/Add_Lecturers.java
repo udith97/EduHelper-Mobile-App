@@ -1,7 +1,6 @@
 package com.example.eduhelper;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,7 +29,7 @@ public class Add_Lecturers extends AppCompatActivity {
 //    int IMAGE_REQUEST_CODE = 5;
 
 
-     Uri fileuri;
+//     Uri fileuri;
 
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

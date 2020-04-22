@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background02"
     android:orientation="vertical"
     tools:context=".List_Lecturers">
 
@@ -11,7 +12,7 @@
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
-        android:layout_height="53dp"
+        android:layout_height="50dp"
         android:layout_margin="25dp"
         android:padding="10dp"
         android:queryHint="Search" />
@@ -19,7 +20,15 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="480dp"
         android:layout_margin="5dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <Button
+        android:id="@+id/goToInsertLecturer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:text="@string/insertLecturer" />
 </LinearLayout>
