@@ -48,4 +48,6 @@ public class timetablehelper {
     public void setTgroup(String tgroup) {
         this.tgroup = tgroup;
     }
+
+
 }
