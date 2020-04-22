@@ -10,8 +10,9 @@
     tools:ignore="MissingDefaultResource">
 
     <LinearLayout
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFDA99"
         android:orientation="vertical">
 
         <TextView
@@ -65,16 +66,16 @@
             android:id="@+id/updateBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="100dp"
             android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
             android:text="@string/update" />
 
         <Button
             android:id="@+id/deleteBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="100dp"
             android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
             android:text="@string/delete" />
 
 
