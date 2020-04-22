@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    android:background="#fcfcfc"
+    tools:context=".PaperUpdate">
+
+
+
+    
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="325dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="#fff">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update Past Papers Info"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="@color/cardview_dark_background"/>
+
+
+            <EditText
+                android:id="@+id/upyearpp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/year"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/upmodulecpp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/moduleCode"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/upsempp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/semester"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center">
+
+            </EditText>
+            
+            <EditText
+                android:id="@+id/upfacpp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/faculty"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center">
+
+            </EditText>
+            
+            <EditText
+                android:id="@+id/upexampp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/exam"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center">
+
+            </EditText>
+
+
+            <Button
+                android:id="@+id/upbtnpp"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="#000"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="UPDATE"
+                android:textAllCaps="false"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
