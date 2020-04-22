@@ -1,13 +1,13 @@
 package com.example.eduhelper;
 
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.widget.SearchView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,10 +21,10 @@ import java.util.ArrayList;
 
 public class ViewPastPapers extends AppCompatActivity {
 
-    private DatabaseReference mDatabase;
-    private ArrayList<Paper> list;
-    private RecyclerView recyclerView;
-    private SearchView searchView;
+     DatabaseReference mDatabase;
+     ArrayList<PastpaperHelper> list;
+     RecyclerView recyclerView;
+     SearchView searchView;
 
 
     @Override
@@ -49,7 +49,7 @@ public class ViewPastPapers extends AppCompatActivity {
                     if (dataSnapshot.exists()){
                         list = new ArrayList<>();
                         for (DataSnapshot x : dataSnapshot.getChildren()){
-                            list.add(x.getValue(Paper.class));
+                            list.add(x.getValue(PastpaperHelper.class));
                         }
 
                         ViewPastpaperAdapter adapter = new ViewPastpaperAdapter(list);
@@ -84,8 +84,8 @@ public class ViewPastPapers extends AppCompatActivity {
     }
 
     private void search( String str){
-        ArrayList<Paper> Plist = new ArrayList<>();
-        for(Paper object : Plist){
+        ArrayList<PastpaperHelper> Plist = new ArrayList<>();
+        for(PastpaperHelper object : Plist){
             if (object.getModuleCode().toLowerCase().contains(str.toLowerCase())){
                 Plist.add(object);
             }

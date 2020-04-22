@@ -12,8 +12,8 @@ import java.util.ArrayList;
 
 public class ViewPastpaperAdapter extends RecyclerView.Adapter<ViewPastpaperAdapter.ViewHolderm> {
 
-    ArrayList<Paper> list;
-    public ViewPastpaperAdapter(ArrayList<Paper> list){
+    ArrayList<PastpaperHelper> list;
+    public ViewPastpaperAdapter(ArrayList<PastpaperHelper> list){
         this.list = list;
     }
     @NonNull
@@ -27,8 +27,8 @@ public class ViewPastpaperAdapter extends RecyclerView.Adapter<ViewPastpaperAdap
     @Override
     public void onBindViewHolder(@NonNull ViewHolderm holder, int position) {
 
-        holder.samplehead.setText(list.get(position).getYear());
-        holder.description.setText(list.get(position).getModuleCode());
+        holder.rsamplehead.setText(list.get(position).getYear());
+        holder.rdescription.setText(list.get(position).getModuleCode());
 
 
     }
@@ -39,12 +39,12 @@ public class ViewPastpaperAdapter extends RecyclerView.Adapter<ViewPastpaperAdap
     }
 
     class ViewHolderm extends RecyclerView.ViewHolder{
-        TextView samplehead, description;
+        TextView rsamplehead, rdescription;
         public ViewHolderm(@NonNull View itemView) {
             super(itemView);
 
-                samplehead = itemView.findViewById(R.id.samplehead);
-                description = itemView.findViewById(R.id.description);
+                rsamplehead = itemView.findViewById(R.id.samplehead);
+                rdescription = itemView.findViewById(R.id.description);
 
 
         }

@@ -3,7 +3,6 @@ package com.example.eduhelper;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,29 +13,19 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class Register extends AppCompatActivity {
-    EditText rIdNo, rName, rEmail, rFaculty, rPassword;
+    EditText rIdNo, rName, rEmail, rFaculty, rYear, rPassword, rConPassword;
     Button rRegisterBtn;
     TextView rGoToLogin;
-    FirebaseAuth fAuth;
-    FirebaseFirestore fStore;
-    String userID;
-
+    FirebaseAuth fAth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
         rIdNo = findViewById(R.id.idNo);
         rName = findViewById(R.id.name);
         rEmail = findViewById(R.id.email);
@@ -45,10 +34,9 @@ public class Register extends AppCompatActivity {
         rRegisterBtn = findViewById(R.id.registerBtn);
         rGoToLogin = findViewById(R.id.goToLogin);
 
-        fAuth = FirebaseAuth.getInstance();
-        fStore = FirebaseFirestore.getInstance();
+        fAth = FirebaseAuth.getInstance();
 
-        if (fAuth.getCurrentUser() != null){
+        if (fAth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
         }
@@ -56,10 +44,10 @@ public class Register extends AppCompatActivity {
         rRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String idNo = rIdNo.getText().toString();
-                final String name = rName.getText().toString();
-                final String email = rEmail.getText().toString().trim();
-                final String faculty = rFaculty.getText().toString();
+                String idNo = rIdNo.getText().toString().trim();
+                String name = rName.getText().toString().trim();
+                String email = rEmail.getText().toString().trim();
+                String faculty = rFaculty.getText().toString().trim();
                 String password = rPassword.getText().toString().trim();
 
                 if(TextUtils.isEmpty(idNo)){
@@ -89,25 +77,12 @@ public class Register extends AppCompatActivity {
 
                 //register the user in firebase
 
-                fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                fAth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(Register.this,"User Created.", Toast.LENGTH_SHORT).show();
-                            userID = fAuth.getCurrentUser().getUid();
-                            DocumentReference documentReference = fStore.collection("users").document(userID);
-                            Map<String,Object> user = new HashMap<>();
-                            user.put("id",idNo);
-                            user.put("name",name);
-                            user.put("email",email);
-                            user.put("faculty",faculty);
-                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    Log.d("TAG", "onSuccess: User Profile is created for"+userID);
-                                }
-                            });
-
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         }else{
                             Toast.makeText(Register.this, "Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
 
@@ -115,7 +90,7 @@ public class Register extends AppCompatActivity {
                     }
                 });
             }
-        });startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        });
 
         rGoToLogin.setOnClickListener(new View.OnClickListener() {
             @Override
