@@ -1,52 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:layout_margin="5dp"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-app:cardElevation="25dp"
-tools:ignore="MissingDefaultResource">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view1="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-<LinearLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/Anntitle"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="sample"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/Annfac"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="sample"/>
+        android:id="@+id/cardView1"
+        android:layout_margin="5dp"
+        card_view1:cardElevation="4dp">
 
-    <TextView
-        android:id="@+id/Annyr"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="sample"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/Anndes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="sample"/>
+        <LinerLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:padding="5dp"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/anntitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:padding="5dp"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+        </LinerLayout>
+
+            <LinerLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Faculty"
+                    android:padding="5dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/annfac"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Faculty"
+                    android:padding="5dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+            </LinerLayout>
+
+            <LinerLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Year"
+                    android:padding="5dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/annyr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Year"
+                    android:padding="5dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+            </LinerLayout>
+
+            <LinerLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:padding="5dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/anndes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:padding="5dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+            </LinerLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
-
-<View
-    android:layout_width="match_parent"
-    android:layout_height="1dp"
-    android:background="#000" />
-</androidx.cardview.widget.CardView>
