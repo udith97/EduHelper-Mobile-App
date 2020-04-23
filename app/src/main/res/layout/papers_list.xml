@@ -173,7 +173,26 @@
                     android:text="UPDATE"
                     android:background="#000"
                     android:textColor="#fff"
+                    android:layout_marginRight="15dp"
                     android:textAllCaps="false"/>
+
+
+                <Button
+                    android:id="@+id/viewpdfpp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="VIEW"
+                    android:background="#000"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"/>
+
+
+
+
+
+
+
+
 
             </LinearLayout>
 

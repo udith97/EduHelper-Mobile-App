@@ -70,6 +70,14 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.PaperHolder>
             }
         });
 
+//       holder.viewbtnpp.setOnClickListener(new View.OnClickListener() {
+//           @Override
+//           public void onClick(View v) {
+//               Intent y = new Intent(v.getContext(), PastpaperRecyclerPDF.class);
+//               v.getContext().startActivity(y);
+//           }
+//       });
+
     }
 
     @Override
@@ -80,11 +88,12 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.PaperHolder>
     public class PaperHolder extends  RecyclerView.ViewHolder{
 
         TextView pyear, pMcode,psem, pfac, pexam;
-        Button deletebtn, uploadbtn;
+        Button deletebtn, uploadbtn , viewbtnpp;
         CardView cardView;
 
         public PaperHolder(@NonNull View itemView) {
             super(itemView);
+
 
             pyear = itemView.findViewById(R.id.pyear_id);
             pMcode = itemView.findViewById(R.id.module_C);
@@ -94,6 +103,9 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.PaperHolder>
             deletebtn = itemView.findViewById(R.id.vdeletebtn);
             cardView = itemView.findViewById(R.id.holderview);
             uploadbtn = itemView.findViewById(R.id.vupdate);
+
+
+            viewbtnpp = itemView.findViewById(R.id.upbtnpp);
 
         }
     }
