@@ -2,7 +2,7 @@ package com.example.eduhelper;
 
 public class announcementHelper {
 
-    private int year;
+    private String year;
     private String title;
     private String faculty;
     private String description;
@@ -10,14 +10,21 @@ public class announcementHelper {
     public announcementHelper() {
     }
 
-    public announcementHelper(String title,String faculty,int year,String description) {
+    public announcementHelper(String title, String faculty, String year, String description) {
+
         this.title = title;
         this.faculty = faculty;
         this.year = year;
         this.description = description;
     }
 
+    public String getYear() {
+        return year;
+    }
 
+    public void setYear(String year) {
+        this.year = year;
+    }
 
     public String getTitle() {
         return title;
@@ -35,14 +42,6 @@ public class announcementHelper {
         this.faculty = faculty;
     }
 
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -50,6 +49,4 @@ public class announcementHelper {
     public void setDescription(String description) {
         this.description = description;
     }
-
-
 }
