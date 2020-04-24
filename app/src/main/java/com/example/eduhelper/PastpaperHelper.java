@@ -1,6 +1,7 @@
 package com.example.eduhelper;
 
 public class PastpaperHelper {
+
     private String year;
     private String faculty;
     private String moduleCode;
@@ -18,6 +19,7 @@ public class PastpaperHelper {
         this.exam = exam;
         this.semester = semester;
     }
+
 
     public String getYear() {
         return year;
