@@ -19,7 +19,13 @@
         <activity android:name=".List_Lecturers" />
         <activity android:name=".Add_Lecturers" />
         <activity android:name=".Marks_Calculation" />
-        <activity android:name=".ListTimetables" />
+        <activity android:name=".ListTimetables" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
         <activity android:name=".Edit_Past_past_paper" />
         <activity android:name=".Insert_P_Paper" />
         <activity android:name=".EditTimetable" />

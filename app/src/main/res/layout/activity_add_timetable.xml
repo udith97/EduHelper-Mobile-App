@@ -145,6 +145,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="70dp"
                 android:layout_marginRight="65dp"
+                android:textStyle="bold"
                 android:background="@drawable/browse_button"
                 android:text="@string/browse_btn" />
 
@@ -158,6 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="70dp"
                 android:layout_marginRight="65dp"
+                android:textStyle="bold"
                 android:background="@drawable/browse_button"
                 android:text="@string/btn_confirm" />
 
@@ -172,6 +174,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:textColor="#F9F8FB"
+                android:textStyle="bold"
                 android:background="@drawable/custom_button"
                 android:text="@string/submit" />
 
@@ -186,6 +189,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:textColor="#F9F8FB"
+                android:textStyle="bold"
                 android:background="@drawable/custom_button"
                 android:text="@string/btn_clear" />
 
