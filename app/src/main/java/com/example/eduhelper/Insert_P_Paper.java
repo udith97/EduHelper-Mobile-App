@@ -178,7 +178,8 @@ public class Insert_P_Paper extends AppCompatActivity {
         progressDialog.setProgress(0);
         progressDialog.show();
 
-        final String fileName = System.currentTimeMillis()+"";
+        final String fileName = System.currentTimeMillis()+".pdf";
+        final String fileName1 = System.currentTimeMillis()+ "";
         StorageReference storageReference = storage.getReference();
         storageReference.child("Past_Papers").child(fileName).putFile(fileUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -187,7 +188,7 @@ public class Insert_P_Paper extends AppCompatActivity {
 
                       String url = taskSnapshot.getUploadSessionUri().toString();
                       mDatabase = rootNode.getReference();
-                      mDatabase.child("PastpapersPDF").child(String.valueOf(ref)).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
+                      mDatabase.child(fileName1).child(ref).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
 
                           @Override
                           public void onComplete(@NonNull Task<Void> task) {
