@@ -33,7 +33,6 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/browse_button"
-        android:text="@string/btn_inserttimetable"
-        android:textSize="18sp"
-        />
+        android:text="Insert Timetable"
+        android:textSize="18sp" />
 </LinearLayout>
