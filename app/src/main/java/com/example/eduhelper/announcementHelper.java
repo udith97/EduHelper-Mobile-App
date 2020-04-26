@@ -2,28 +2,19 @@ package com.example.eduhelper;
 
 public class announcementHelper {
 
-    private String year;
     private String title;
     private String faculty;
+    private String year;
     private String description;
 
     public announcementHelper() {
     }
 
     public announcementHelper(String title, String faculty, String year, String description) {
-
         this.title = title;
         this.faculty = faculty;
         this.year = year;
         this.description = description;
-    }
-
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
     }
 
     public String getTitle() {
@@ -40,6 +31,14 @@ public class announcementHelper {
 
     public void setFaculty(String faculty) {
         this.faculty = faculty;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
     }
 
     public String getDescription() {

@@ -29,8 +29,11 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-public class new_announcement extends AppCompatActivity {
-    private EditText title,faculty,year,description ;
+public class Add_announcement extends AppCompatActivity {
+
+
+
+    private EditText title,faculty,year,description;
     private Button submit, browse,upload;
 
     private Uri urifile;
@@ -46,10 +49,11 @@ public class new_announcement extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_announcement);
+        setContentView(R.layout.add_announcement);
 
         storage = FirebaseStorage.getInstance();
         rootNode = FirebaseDatabase.getInstance();
+
 
         title = findViewById(R.id.ann_title);
         faculty = findViewById(R.id.ann_faculty);
@@ -65,7 +69,6 @@ public class new_announcement extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 rootNode = FirebaseDatabase.getInstance();
                 mDatabase = rootNode.getReference("announcement");
 
@@ -78,27 +81,31 @@ public class new_announcement extends AppCompatActivity {
                 annTitle = ref;
 
                 announcementHelper annHelper = new announcementHelper(annTitle, annFac, annYear, annDes);
-                if(mDatabase != null ) {
+
+                if(mDatabase != null) {
                     mDatabase.child(annTitle).setValue(annHelper);
-                    Toast.makeText(new_announcement.this,"Insert Successful", Toast.LENGTH_LONG).show();
-                    //startActivity(new Intent(getApplicationContext(), Announcement.class));
+                    Toast.makeText(Add_announcement.this,"Insert Successful", Toast.LENGTH_LONG).show();
+//                   startActivity(new Intent(getApplicationContext(), ));
+                }else{
+                    Toast.makeText(Add_announcement.this,"Input Failed", Toast.LENGTH_LONG).show();
+
                 }
 
-                else{
-                    Toast.makeText(new_announcement.this,"Insert Failed!", Toast.LENGTH_LONG).show();
-                }
             }
         });
 
         browse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ContextCompat.checkSelfPermission(new_announcement.this, Manifest.permission.READ_EXTERNAL_STORAGE) == getPackageManager().PERMISSION_GRANTED){
+
+                if(ContextCompat.checkSelfPermission(Add_announcement.this, Manifest.permission.READ_EXTERNAL_STORAGE) == getPackageManager().PERMISSION_GRANTED){
                     selectpdf();
                 }
                 else{
-                    ActivityCompat.requestPermissions(new_announcement.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 9);
+                    ActivityCompat.requestPermissions(Add_announcement.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 9);
                 }
+
+
             }
         });
 
@@ -111,6 +118,10 @@ public class new_announcement extends AppCompatActivity {
             }
         });
 
+
+
+
+//        final EditText Input = findViewById(R.id.in1);
         final Button Clear = findViewById(R.id.clearBtn);
 
         Clear.setOnClickListener(new View.OnClickListener() {
@@ -133,8 +144,8 @@ public class new_announcement extends AppCompatActivity {
             }
         });
 
-    }
 
+    }
     private void selectpdf(){
 
         Intent intent = new Intent();
@@ -154,11 +165,12 @@ public class new_announcement extends AppCompatActivity {
             message.setText("Selected file: " + data.getData().getLastPathSegment());
 
         }
-        else{Toast.makeText(new_announcement.this,"please select a file",Toast.LENGTH_SHORT).show();
+        else{Toast.makeText(Add_announcement.this,"please select a file",Toast.LENGTH_SHORT).show();
         }
 
 
-        }
+    }
+
 
     private  void uploadPdf(){
 
@@ -181,10 +193,10 @@ public class new_announcement extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(new_announcement.this, "File successfully Submitted",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Add_announcement.this, "File successfully Submitted",Toast.LENGTH_SHORT).show();
                         }
                         else{
-                            Toast.makeText(new_announcement.this, "File submission failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Add_announcement.this, "File submission failed", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -193,7 +205,7 @@ public class new_announcement extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
 
-                Toast.makeText(new_announcement.this, "File Upload Failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Add_announcement.this, "File Upload Failed", Toast.LENGTH_SHORT).show();
 
             }
         }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
@@ -209,5 +221,6 @@ public class new_announcement extends AppCompatActivity {
 
 
     }
+
 
 }

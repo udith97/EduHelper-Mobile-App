@@ -17,10 +17,10 @@ import java.util.ArrayList;
 
 public class announcement_list extends AppCompatActivity {
     private RecyclerView rv;
-    private ArrayList<announcementHelper>announcementData;
+    private ArrayList<announcementHelper>annData;
     private AnnAdapter annAdapter;
 
-    DatabaseReference dbref;
+    DatabaseReference ref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +29,10 @@ public class announcement_list extends AppCompatActivity {
 
         rv = findViewById(R.id.recycle1);
         rv.setLayoutManager(new LinearLayoutManager(this));
-        announcementData = new ArrayList<announcementHelper>();
+        annData = new ArrayList<announcementHelper>();
 
-        dbref = FirebaseDatabase.getInstance().getReference().child("announcement");
-        dbref.addListenerForSingleValueEvent(valueEventListener);
+        ref = FirebaseDatabase.getInstance().getReference().child("announcement");
+        ref.addListenerForSingleValueEvent(valueEventListener);
     }
 
     ValueEventListener valueEventListener = new ValueEventListener() {
@@ -40,9 +40,9 @@ public class announcement_list extends AppCompatActivity {
         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
             for (DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
                 announcementHelper AHelper = dataSnapshot1.getValue(announcementHelper.class);
-                announcementData.add(AHelper);
+                annData.add(AHelper);
             }
-            annAdapter = new AnnAdapter(announcement_list.this,announcementData);
+            annAdapter = new AnnAdapter(announcement_list.this,annData);
             rv.setAdapter(annAdapter);
         }
 
