@@ -50,6 +50,7 @@ public class LecturerAdapterClass extends RecyclerView.Adapter<LecturerAdapterCl
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("lecturer").child(lecHelper.getName());
                 databaseReference.removeValue();
                 Toast.makeText(context, "Lecturer Deleted.",Toast.LENGTH_SHORT).show();
+                context.startActivity(new Intent(context.getApplicationContext(), List_Lecturers.class));
             }
         });
 
