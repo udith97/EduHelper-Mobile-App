@@ -79,7 +79,31 @@ public class Insert_P_Paper extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                inputText();
+                String iyear = year.getText().toString();
+                String sem = semester.getText().toString();
+                String mcode = moduleCode.getText().toString();
+                String ifac = faculty.getText().toString();
+                String iexam = exam.getText().toString();
+                ref = iyear;
+                iyear = ref;
+
+
+
+                PastpaperHelper paperHelper = new PastpaperHelper(iyear, sem, mcode, ifac, iexam);
+                mDatabase = rootNode.getReference("pastPapers");
+
+                if(mDatabase != null ) {
+
+                    mDatabase.child(iyear).setValue(paperHelper);
+
+                    Toast.makeText(Insert_P_Paper.this,"Insert Successful", Toast.LENGTH_SHORT).show();
+//            startActivity(new Intent(getApplicationContext(), ViewPastPapers.class));
+                }
+
+                else{
+                    Toast.makeText(Insert_P_Paper.this,"Insert Failed!", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
@@ -115,35 +139,11 @@ public class Insert_P_Paper extends AppCompatActivity {
 
     }
 
-
-    private void inputText(){
-        String iyear = year.getText().toString();
-        String sem = semester.getText().toString();
-        String mcode = moduleCode.getText().toString();
-        String ifac = faculty.getText().toString();
-        String iexam = exam.getText().toString();
-        ref = iyear;
-        iyear = ref;
-
-
-
-        PastpaperHelper paperHelper = new PastpaperHelper(iyear, sem, mcode, ifac, iexam);
-        mDatabase = rootNode.getReference("pastPapers");
-
-        if(mDatabase != null ) {
-
-            mDatabase.child(iyear).setValue(paperHelper);
-
-            Toast.makeText(Insert_P_Paper.this,"Insert Successful", Toast.LENGTH_SHORT).show();
-//            startActivity(new Intent(getApplicationContext(), ViewPastPapers.class));
-        }
-
-        else{
-            Toast.makeText(Insert_P_Paper.this,"Insert Failed!", Toast.LENGTH_SHORT).show();
-        }
-
-
-    }
+//
+//    private void inputText(){
+//
+//
+//    }
 
 
 
@@ -181,14 +181,14 @@ public class Insert_P_Paper extends AppCompatActivity {
         final String fileName = System.currentTimeMillis()+".pdf";
         final String fileName1 = System.currentTimeMillis()+ "";
         StorageReference storageReference = storage.getReference();
-        storageReference.child("Past_Papers").child(fileName).putFile(fileUri)
+        storageReference.child("Past_Papers").child(ref).child(fileName).putFile(fileUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                       String url = taskSnapshot.getUploadSessionUri().toString();
                       mDatabase = rootNode.getReference();
-                      mDatabase.child(fileName1).child(ref).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
+                      mDatabase.child("paperPDFfolder").child(fileName1).child(ref).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
 
                           @Override
                           public void onComplete(@NonNull Task<Void> task) {

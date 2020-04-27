@@ -24,26 +24,26 @@ public class PaperUpdate extends AppCompatActivity {
         setContentView(R.layout.activity_paper_update);
 
         up_year = findViewById(R.id.upyearpp);
-        up_moduleCode = findViewById(R.id.upmodulecpp);
         up_semester = findViewById(R.id.upsempp);
+        up_moduleCode = findViewById(R.id.upmodulecpp);
         up_faculty = findViewById(R.id.upfacpp);
         up_exam = findViewById(R.id.upexampp);
 
         uploadbtn = findViewById(R.id.upbtnpp);
 
         Intent intent = getIntent();
-        year = intent.getStringExtra("year");
-        moduleCode = intent.getStringExtra("moduleCode");
-        semester = intent.getStringExtra("semester");
-        faculty = intent.getStringExtra("faculty");
-        exam = intent.getStringExtra("exam");
+        year = intent.getStringExtra("iyear");
+        semester = intent.getStringExtra("sem");
+        moduleCode = intent.getStringExtra("mcode");
+        faculty = intent.getStringExtra("ifac");
+        exam = intent.getStringExtra("iexam");
 
 
 
 
         up_year.setText(year);
-        up_moduleCode.setText(moduleCode);
         up_semester.setText(semester);
+        up_moduleCode.setText(moduleCode);
         up_faculty.setText(faculty);
         up_exam.setText(exam);
 
