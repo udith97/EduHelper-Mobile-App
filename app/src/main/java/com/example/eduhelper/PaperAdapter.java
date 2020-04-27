@@ -22,11 +22,18 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.PaperHolder>
 
     private Context context;
     private ArrayList<PastpaperHelper> userData;
+    DatabaseReference databaseReference;
+
+
 
     public PaperAdapter(Context c, ArrayList<PastpaperHelper> userData){
         this.context = c;
         this.userData = userData;
+
+
     }
+
+
 
     @NonNull
     @Override
@@ -41,15 +48,14 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.PaperHolder>
     public void onBindViewHolder(@NonNull PaperHolder holder, int position) {
         final PastpaperHelper pastpaperHelper = this.userData.get(position);
         holder.pyear.setText(pastpaperHelper.getYear());
-        holder.pMcode.setText(pastpaperHelper.getModuleCode());
         holder.psem.setText(pastpaperHelper.getSemester());
+        holder.pMcode.setText(pastpaperHelper.getModuleCode());
         holder.pfac.setText(pastpaperHelper.getFaculty());
         holder.pexam.setText(pastpaperHelper.getExam());
-
         holder.deletebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("pastPapers").child(pastpaperHelper.getYear());
+                databaseReference = FirebaseDatabase.getInstance().getReference("pastPapers").child(pastpaperHelper.getYear());
                 databaseReference.removeValue();
                 Toast.makeText(context,"Record deleted", Toast.LENGTH_LONG).show();
 
@@ -60,23 +66,18 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.PaperHolder>
             @Override
             public void onClick(View v) {
                 Intent x = new Intent(v.getContext(), PaperUpdate.class);
-                x.putExtra("year", pastpaperHelper.getYear() );
-                x.putExtra("moduleCode", pastpaperHelper.getModuleCode());
-                x.putExtra("semester", pastpaperHelper.getSemester());
-                x.putExtra("faculty", pastpaperHelper.getFaculty());
-                x.putExtra("exam", pastpaperHelper.getExam());
+                x.putExtra("iyear", pastpaperHelper.getYear() );
+                x.putExtra("mcode", pastpaperHelper.getModuleCode());
+                x.putExtra("sem", pastpaperHelper.getSemester());
+                x.putExtra("ifac", pastpaperHelper.getFaculty());
+                x.putExtra("iexam", pastpaperHelper.getExam());
 
                 v.getContext().startActivity(x);
             }
         });
 
-//       holder.viewbtnpp.setOnClickListener(new View.OnClickListener() {
-//           @Override
-//           public void onClick(View v) {
-//               Intent y = new Intent(v.getContext(), PastpaperRecyclerPDF.class);
-//               v.getContext().startActivity(y);
-//           }
-//       });
+
+
 
     }
 
@@ -96,10 +97,10 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.PaperHolder>
 
 
             pyear = itemView.findViewById(R.id.pyear_id);
-            pMcode = itemView.findViewById(R.id.module_C);
             psem = itemView.findViewById(R.id.vsem);
-            pfac = itemView.findViewById(R.id.vfac);
+            pMcode = itemView.findViewById(R.id.module_C);
             pexam = itemView.findViewById(R.id.vexam);
+            pfac = itemView.findViewById(R.id.vfac);
             deletebtn = itemView.findViewById(R.id.vdeletebtn);
             cardView = itemView.findViewById(R.id.holderview);
             uploadbtn = itemView.findViewById(R.id.vupdate);
@@ -109,4 +110,7 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.PaperHolder>
 
         }
     }
+
 }
+
+

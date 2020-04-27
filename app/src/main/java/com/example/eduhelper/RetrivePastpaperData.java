@@ -20,10 +20,10 @@ import java.util.ArrayList;
 
 public class RetrivePastpaperData extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerViewp;
     private ArrayList<PastpaperHelper> paperdata;
     private PaperAdapter paperAdapter;
-    private Button inputredirect;
+    private Button inputredirect, downloadpdf;
 
     DatabaseReference dref;
 
@@ -32,10 +32,11 @@ public class RetrivePastpaperData extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retrive_pastpaper_data);
 
-        recyclerView = findViewById(R.id.recu);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerViewp= findViewById(R.id.recu);
+        recyclerViewp.setLayoutManager(new LinearLayoutManager(this));
         paperdata = new ArrayList<PastpaperHelper>();
         inputredirect = findViewById(R.id.redirectbtn);
+        downloadpdf = findViewById(R.id.paperdown);
 
         dref = FirebaseDatabase.getInstance().getReference().child("pastPapers");
         dref.addListenerForSingleValueEvent(valueEventListener);
@@ -48,6 +49,14 @@ public class RetrivePastpaperData extends AppCompatActivity {
             }
         });
 
+        downloadpdf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RetrivePastpaperData.this, DownpdfPaper.class));
+            }
+        });
+
+
     }
 
     ValueEventListener valueEventListener = new ValueEventListener() {
@@ -58,7 +67,7 @@ public class RetrivePastpaperData extends AppCompatActivity {
                 paperdata.add(helpc);
             }
             paperAdapter = new PaperAdapter(RetrivePastpaperData.this,paperdata);
-            recyclerView.setAdapter(paperAdapter);
+            recyclerViewp.setAdapter(paperAdapter);
         }
 
         @Override

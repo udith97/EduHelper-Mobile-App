@@ -35,7 +35,7 @@ public class Insert_P_Paper extends AppCompatActivity {
 
     private EditText year,faculty, moduleCode, exam, semester;
 
-    private Button submit, choosefile, upload;
+    private Button submit, choosefile, upload, downloadpdf;
     private TextView notification;
     private Uri fileUri;
     private ProgressDialog progressDialog;
@@ -70,6 +70,7 @@ public class Insert_P_Paper extends AppCompatActivity {
         choosefile = findViewById(R.id.ip_choosefile_btn);
         upload = findViewById(R.id.ipupload);
         notification = findViewById(R.id.ip_showtext);
+        downloadpdf = findViewById(R.id.paperdown);
 
 
 
@@ -79,7 +80,38 @@ public class Insert_P_Paper extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                inputText();
+                String iyear = year.getText().toString();
+                String sem = semester.getText().toString();
+                String mcode = moduleCode.getText().toString();
+                String ifac = faculty.getText().toString();
+                String iexam = exam.getText().toString();
+                ref = iyear;
+                iyear = ref;
+
+
+
+                PastpaperHelper paperHelper = new PastpaperHelper(iyear, sem, mcode, ifac, iexam);
+                mDatabase = rootNode.getReference("pastPapers");
+
+                if(mDatabase != null ) {
+
+                    mDatabase.child(iyear).setValue(paperHelper);
+
+                    Toast.makeText(Insert_P_Paper.this,"Insert Successful", Toast.LENGTH_SHORT).show();
+//            startActivity(new Intent(getApplicationContext(), ViewPastPapers.class));
+                }
+
+                else{
+                    Toast.makeText(Insert_P_Paper.this,"Insert Failed!", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+        downloadpdf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Insert_P_Paper.this, PaperPDFAdapter.class));
             }
         });
 
@@ -115,35 +147,11 @@ public class Insert_P_Paper extends AppCompatActivity {
 
     }
 
-
-    private void inputText(){
-        String iyear = year.getText().toString();
-        String sem = semester.getText().toString();
-        String mcode = moduleCode.getText().toString();
-        String ifac = faculty.getText().toString();
-        String iexam = exam.getText().toString();
-        ref = iyear;
-        iyear = ref;
-
-
-
-        PastpaperHelper paperHelper = new PastpaperHelper(iyear, sem, mcode, ifac, iexam);
-        mDatabase = rootNode.getReference("pastPapers");
-
-        if(mDatabase != null ) {
-
-            mDatabase.child(iyear).setValue(paperHelper);
-
-            Toast.makeText(Insert_P_Paper.this,"Insert Successful", Toast.LENGTH_SHORT).show();
-//            startActivity(new Intent(getApplicationContext(), ViewPastPapers.class));
-        }
-
-        else{
-            Toast.makeText(Insert_P_Paper.this,"Insert Failed!", Toast.LENGTH_SHORT).show();
-        }
-
-
-    }
+//
+//    private void inputText(){
+//
+//
+//    }
 
 
 
@@ -168,10 +176,6 @@ public class Insert_P_Paper extends AppCompatActivity {
 
     private void uploadFile(){
 
-
-
-
-
         progressDialog =new ProgressDialog(this);
         progressDialog.setProgressStyle(progressDialog.STYLE_HORIZONTAL);
         progressDialog.setTitle("Uploading file..");
@@ -188,7 +192,7 @@ public class Insert_P_Paper extends AppCompatActivity {
 
                       String url = taskSnapshot.getUploadSessionUri().toString();
                       mDatabase = rootNode.getReference();
-                      mDatabase.child(fileName1).child(ref).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
+                      mDatabase.child(fileName1).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
 
                           @Override
                           public void onComplete(@NonNull Task<Void> task) {
