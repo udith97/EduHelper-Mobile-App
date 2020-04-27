@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".announcement_list"
-    android:background="@drawable/ann1">
+    android:background="@drawable/bck_bck">
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search1"
@@ -23,12 +23,11 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
     <Button
-        android:id="@+id/insert1"
+        android:id="@+id/goToInsertAnn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:layout_marginRight="60dp"
         android:layout_marginLeft="60dp"
-        android:text="Insert Announcement"/>
-
+        android:layout_marginRight="60dp"
+        android:background="@drawable/custom_button3"
+        android:text="@string/insert_ann" />
 </LinearLayout>

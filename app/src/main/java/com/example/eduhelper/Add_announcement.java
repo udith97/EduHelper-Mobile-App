@@ -85,7 +85,7 @@ public class Add_announcement extends AppCompatActivity {
                 if(mDatabase != null) {
                     mDatabase.child(annTitle).setValue(annHelper);
                     Toast.makeText(Add_announcement.this,"Insert Successful", Toast.LENGTH_LONG).show();
-//                   startActivity(new Intent(getApplicationContext(), ));
+                     startActivity(new Intent(getApplicationContext(), announcement_list.class));
                 }else{
                     Toast.makeText(Add_announcement.this,"Input Failed", Toast.LENGTH_LONG).show();
 

@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.DatabaseReference;
@@ -51,6 +50,7 @@ public class AnnAdapter extends RecyclerView.Adapter<AnnAdapter.MyViewHolder> {
                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference("announcement").child(annData.getTitle());
                 ref.removeValue();
                 Toast.makeText(context,"Data Deleted",Toast.LENGTH_SHORT).show();
+                context.startActivity(new Intent(context.getApplicationContext(), announcement_list.class));
             }
         });
 

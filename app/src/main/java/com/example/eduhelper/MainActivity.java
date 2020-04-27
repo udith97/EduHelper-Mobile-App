@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button LecturerListBtn, TimetableBtn;
+    Button LecturerListBtn, TimetableBtn, AnnouncementListBtn, CalculaterBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
         LecturerListBtn = findViewById(R.id.lecturerBtn);
         TimetableBtn = findViewById(R.id.timeTableBtn);
+        AnnouncementListBtn = findViewById(R.id.announcementBtn);
+        CalculaterBtn = findViewById(R.id.calBtn);
 
         LecturerListBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +37,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        AnnouncementListBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),announcement_list.class));
+            }
+        });
+
+        CalculaterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Marks_Calculation.class));
+            }
+        });
 
     }
 
