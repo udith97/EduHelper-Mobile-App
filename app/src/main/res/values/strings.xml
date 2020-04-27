@@ -89,4 +89,5 @@
     <string name="insert_ann">Insert Announcement</string>
     <string name="btn_inserttimmetable">Insert Timetable</string>
     <string name="anntit">ADD ANNOUNCEMENT</string>
+    <string name="downloadpdf">DOWNLOAD PDF</string>
 </resources>

@@ -25,10 +25,15 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.PaperHolder>
     DatabaseReference databaseReference;
 
 
+
     public PaperAdapter(Context c, ArrayList<PastpaperHelper> userData){
         this.context = c;
         this.userData = userData;
+
+
     }
+
+
 
     @NonNull
     @Override
@@ -71,13 +76,6 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.PaperHolder>
             }
         });
 
-
-        holder.viewbtnpp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
 
 

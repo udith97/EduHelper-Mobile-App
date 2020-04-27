@@ -12,21 +12,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DownpdfPaper"></activity>
         <activity android:name=".announcement_list">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".Main2Activity">
+        </activity> <!-- <activity android:name=".Main2Activity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity android:name=".RetrivePastpaperData">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RetrivePastpaperData" />
         <activity android:name=".PaperUpdate" />
         <activity android:name=".UpdateDataTimetable" />
         <activity android:name=".TimetableAdapterClass" />
@@ -41,7 +46,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".Edit_Past_past_paper" />
-        <activity android:name=".Insert_P_Paper" />
+        <activity android:name=".Insert_P_Paper">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".EditTimetable" />
         <activity android:name=".AddTimetable">
             <intent-filter>
@@ -49,15 +60,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".new_announcement">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Announcement" />
+        </activity> <!-- <activity android:name=".new_announcement"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity android:name=".Announcement" /> -->
         <activity android:name=".EditProfile" />
         <activity android:name=".Login">
             <intent-filter>

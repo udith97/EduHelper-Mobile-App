@@ -7,26 +7,52 @@
     tools:context=".RetrivePastpaperData"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.SearchView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:padding="10dp"
-        android:layout_margin="25dp"
-        />
+        android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recu"
-        android:layout_width="match_parent"
-        android:layout_height="480dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/redirectbtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_margin="5dp"
-        android:text="@string/btn_insertpaper"
-        android:layout_marginRight="60dp"/>
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:layout_margin="25dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recu"
+                android:layout_width="match_parent"
+                android:layout_height="480dp" />
+
+            <Button
+                android:id="@+id/paperdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/downloadpdf" />
+
+            <Button
+                android:id="@+id/redirectbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_margin="5dp"
+                android:text="@string/btn_insertpaper"
+                android:layout_marginRight="60dp"/>
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
 
 
 </LinearLayout>

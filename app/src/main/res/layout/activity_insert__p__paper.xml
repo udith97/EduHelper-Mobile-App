@@ -133,6 +133,12 @@
                 android:layout_height="wrap_content"
                 android:text="@string/upload" />
 
+            <Button
+                android:id="@+id/paperdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/downloadpdf" />
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

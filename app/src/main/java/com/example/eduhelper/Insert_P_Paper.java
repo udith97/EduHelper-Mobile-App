@@ -35,7 +35,7 @@ public class Insert_P_Paper extends AppCompatActivity {
 
     private EditText year,faculty, moduleCode, exam, semester;
 
-    private Button submit, choosefile, upload;
+    private Button submit, choosefile, upload, downloadpdf;
     private TextView notification;
     private Uri fileUri;
     private ProgressDialog progressDialog;
@@ -70,6 +70,7 @@ public class Insert_P_Paper extends AppCompatActivity {
         choosefile = findViewById(R.id.ip_choosefile_btn);
         upload = findViewById(R.id.ipupload);
         notification = findViewById(R.id.ip_showtext);
+        downloadpdf = findViewById(R.id.paperdown);
 
 
 
@@ -104,6 +105,13 @@ public class Insert_P_Paper extends AppCompatActivity {
                     Toast.makeText(Insert_P_Paper.this,"Insert Failed!", Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+
+        downloadpdf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Insert_P_Paper.this, PaperPDFAdapter.class));
             }
         });
 
@@ -168,10 +176,6 @@ public class Insert_P_Paper extends AppCompatActivity {
 
     private void uploadFile(){
 
-
-
-
-
         progressDialog =new ProgressDialog(this);
         progressDialog.setProgressStyle(progressDialog.STYLE_HORIZONTAL);
         progressDialog.setTitle("Uploading file..");
@@ -181,14 +185,14 @@ public class Insert_P_Paper extends AppCompatActivity {
         final String fileName = System.currentTimeMillis()+".pdf";
         final String fileName1 = System.currentTimeMillis()+ "";
         StorageReference storageReference = storage.getReference();
-        storageReference.child("Past_Papers").child(ref).child(fileName).putFile(fileUri)
+        storageReference.child("Past_Papers").child(fileName).putFile(fileUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                       String url = taskSnapshot.getUploadSessionUri().toString();
                       mDatabase = rootNode.getReference();
-                      mDatabase.child("paperPDFfolder").child(fileName1).child(ref).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
+                      mDatabase.child(fileName1).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
 
                           @Override
                           public void onComplete(@NonNull Task<Void> task) {
