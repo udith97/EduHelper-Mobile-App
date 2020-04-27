@@ -50,6 +50,7 @@ public class TimetableAdapterClass extends RecyclerView.Adapter<TimetableAdapter
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("timetables").child(thelper.getTyear());
                 databaseReference.removeValue();
                 Toast.makeText(context, "Timetable Deleted.",Toast.LENGTH_SHORT).show();
+                context.startActivity(new Intent(context.getApplicationContext(), ListTimetables.class));
             }
         });
 

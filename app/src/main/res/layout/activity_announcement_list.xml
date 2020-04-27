@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".announcement_list">
+    tools:context=".announcement_list"
+    android:background="@drawable/ann1">
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search1"

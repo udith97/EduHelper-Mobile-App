@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Add_Lecturers">
+    tools:context=".Update_announcement">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="-1dp"
         android:layout_marginTop="3dp"
-        android:background="@drawable/bck_bck">
+        android:background="@drawable/ann">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,13 +36,13 @@
                 android:layout_centerHorizontal="true">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tm_faculty"
+                    android:id="@+id/u_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:fontFamily="@font/aclonica"
-                    android:hint="@string/faculty"
+                    android:hint="@string/title"
                     android:textAllCaps="false"
                     android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -57,14 +57,14 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tm_year"
+                    android:id="@+id/u_fac"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/year"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:fontFamily="@font/aclonica"
-                    android:textStyle="bold"/>
+                    android:hint="@string/faculty"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Space
@@ -78,14 +78,14 @@
                 android:layout_centerHorizontal="true">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tm_semester"
+                    android:id="@+id/u_yr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:fontFamily="@font/aclonica"
-                    android:hint="@string/semester"
-                    android:textStyle="bold"/>
+                    android:hint="@string/txt_yr"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Space
@@ -98,14 +98,14 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tm_group"
+                    android:id="@+id/u_des"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:fontFamily="@font/aclonica"
-                    android:hint="@string/group"
-                    android:textStyle="bold"/>
+                    android:hint="@string/des"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Space
@@ -126,7 +126,7 @@
                 android:layout_height="20dp" />
 
             <Button
-                android:id="@+id/update"
+                android:id="@+id/u_update"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="70dp"
