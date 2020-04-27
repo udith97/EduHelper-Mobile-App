@@ -62,7 +62,7 @@ public class Add_Lecturers extends AppCompatActivity {
         lecturerContact = findViewById(R.id.contactNumber);
 
         insertBtn = findViewById(R.id.insertLecturer);
-        chooseImageBtn = findViewById(R.id.chooseImage);
+        //chooseImageBtn = findViewById(R.id.chooseImage);
 
         //lecturerImage = findViewById(R.id.imgAdd);
 

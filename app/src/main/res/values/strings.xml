@@ -87,5 +87,6 @@
     <string name="update">Update</string>
     <string name="delete">Delete</string>
     <string name="insert_ann">Insert Announcement</string>
-    <string name="btn_inserttimetable">INSERT TIME TABLE</string>
+    <string name="btn_inserttimmetable">Insert Timetable</string>
+    <string name="anntit">ADD ANNOUNCEMENT</string>
 </resources>

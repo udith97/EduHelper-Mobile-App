@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bck_bck"
     android:orientation="vertical"
-    tools:context=".AddTimetable" >
+    tools:context=".Add_announcement" >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,14 +22,14 @@
                 android:layout_height="31dp" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#99141414"
-                android:padding="5dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:text="@string/addtimetable"
+                android:background="#99141414"
+                android:padding="5dp"
+                android:text="@string/anntit"
                 android:textAlignment="center"
                 android:textColor="#F3EFEF"
                 android:textIsSelectable="false"
@@ -46,14 +46,14 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/in1"
+                    android:id="@+id/ann_title"
                     android:layout_width="354dp"
                     android:layout_height="44dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
-                    android:textStyle="bold"
                     android:background="@drawable/text_view"
-                    android:hint="@string/enterfaculty" />
+                    android:hint="@string/text_title"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Space
@@ -65,14 +65,14 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/in2"
+                    android:id="@+id/ann_faculty"
                     android:layout_width="354dp"
                     android:layout_height="44dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
-                    android:textStyle="bold"
                     android:background="@drawable/text_view"
-                    android:hint="@string/enteryear" />
+                    android:hint="@string/enterfaculty"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Space
@@ -84,14 +84,14 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/in3"
+                    android:id="@+id/ann_year"
                     android:layout_width="354dp"
                     android:layout_height="44dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
-                    android:textStyle="bold"
                     android:background="@drawable/text_view"
-                    android:hint="@string/entersemester" />
+                    android:hint="@string/enteryear"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Space
@@ -103,14 +103,14 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/in4"
+                    android:id="@+id/ann_des"
                     android:layout_width="354dp"
                     android:layout_height="44dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
-                    android:textStyle="bold"
                     android:background="@drawable/text_view"
-                    android:hint="@string/entergroup" />
+                    android:hint="@string/txt_des"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Space
@@ -118,11 +118,11 @@
                 android:layout_height="28dp" />
 
             <TextView
-                android:id="@+id/textView25"
+                android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="@string/attachments"
+                android:text="@string/attach"
                 android:textSize="18sp" />
 
             <Space
@@ -130,7 +130,7 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/in5"
+                android:id="@+id/txtview"
                 android:layout_marginLeft="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -140,7 +140,7 @@
                 android:layout_height="5dp" />
 
             <Button
-                android:id="@+id/btn_browse"
+                android:id="@+id/browseBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="70dp"
@@ -154,7 +154,7 @@
                 android:layout_height="10dp" />
 
             <Button
-                android:id="@+id/btn_confirm"
+                android:id="@+id/confirmBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="70dp"
@@ -168,7 +168,7 @@
                 android:layout_height="23dp" />
 
             <Button
-                android:id="@+id/btn_submit"
+                android:id="@+id/submitBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -183,7 +183,7 @@
                 android:layout_height="12dp" />
 
             <Button
-                android:id="@+id/clr_btn"
+                android:id="@+id/clearBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"

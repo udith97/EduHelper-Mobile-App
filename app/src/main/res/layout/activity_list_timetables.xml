@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background5"
     tools:context=".ListTimetables">
 
 
@@ -13,11 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="53dp"
         android:layout_margin="25dp"
+        android:background="@drawable/text_view"
         android:padding="10dp"
         android:queryHint="Search" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv1"
+        android:background="@drawable/bck_bck"
         android:layout_width="match_parent"
         android:layout_height="494dp"
         android:layout_margin="5dp"
@@ -27,5 +30,9 @@
         android:id="@+id/btn_ins"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_inserttimetable" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/browse_button"
+        android:text="Insert Timetable"
+        android:textSize="18sp" />
 </LinearLayout>
