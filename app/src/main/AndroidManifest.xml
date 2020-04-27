@@ -12,14 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".UpdateData"/>
         <activity android:name=".Add_announcement"/>
-        <activity android:name=".announcement_list">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".announcement_list"/>
         <activity android:name=".RetrivePastpaperData" />
         <activity android:name=".PaperUpdate" />
         <activity android:name=".UpdateDataTimetable" />
@@ -32,8 +27,13 @@
         <activity android:name=".Insert_P_Paper" />
         <activity android:name=".EditTimetable" />
         <activity android:name=".AddTimetable" />
-        <activity android:name=".EditProfile" />
-        <activity android:name=".Login" />
+        <activity android:name=".Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".Register" />
 

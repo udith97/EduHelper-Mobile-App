@@ -33,9 +33,9 @@ public class List_Lecturers<searchView> extends AppCompatActivity {
         setContentView(R.layout.activity_list__lecturers);
         searchView = findViewById(R.id.searchView);
         GoToInsert = findViewById(R.id.goToInsertLecturer);
-       recyclerView = findViewById(R.id.rv);
-       recyclerView.setLayoutManager(new LinearLayoutManager(this));
-       lecHelper = new ArrayList<lecturerHelper>();
+        recyclerView = findViewById(R.id.rv);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        lecHelper = new ArrayList<lecturerHelper>();
 
         ref = FirebaseDatabase.getInstance().getReference().child("lecturer");
         ref.addListenerForSingleValueEvent(valueEventListener);
@@ -65,6 +65,9 @@ public class List_Lecturers<searchView> extends AppCompatActivity {
         public void onCancelled(@NonNull DatabaseError databaseError) {
 
         }
+
+
+
     };
 
 }
