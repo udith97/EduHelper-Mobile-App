@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.083" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/pastPaperBtn"
         android:layout_width="140dp"
         android:layout_height="131dp"
         android:layout_marginBottom="284dp"
@@ -62,6 +62,7 @@
         android:id="@+id/calBtn"
         android:layout_width="140dp"
         android:layout_height="131dp"
+        android:layout_marginBottom="104dp"
         android:background="@drawable/cal_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
