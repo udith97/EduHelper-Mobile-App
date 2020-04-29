@@ -89,4 +89,17 @@
     <string name="insert_ann">Insert Announcement</string>
     <string name="btn_inserttimmetable">Insert Timetable</string>
     <string name="anntit">ADD ANNOUNCEMENT</string>
+    <string name="cal_gpa">Calculate GPA</string>
+    <string name="module1">Module 01</string>
+    <string name="credit_points">Points for Grade</string>
+    <string name="credithours">Credit Hours</string>
+    <string name="module2">Module 02</string>
+    <string name="module3">Module 03</string>
+    <string name="module4">Module 04</string>
+    <string name="totCreditHours">Total Credit Hours</string>
+    <string name="totWeightedGrade">Total Weighted Grade Point</string>
+    <string name="gpa">Your GPA</string>
+    <string name="downloadpdf">Download PDF</string>
+    <string name="cal_text">You need to below amount of marks to pass the module </string>
+    <string name="goToCalcGpa"><![CDATA[Need Calculate your GPA? --->]]></string>
 </resources>

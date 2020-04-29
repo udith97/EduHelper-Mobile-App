@@ -124,6 +124,21 @@
                     android:text="Answer"
                     android:textAlignment="center"
                     android:textSize="30sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+                <TextView
+                    android:id="@+id/gpaCalc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aclonica"
+                    android:text="@string/goToCalcGpa"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

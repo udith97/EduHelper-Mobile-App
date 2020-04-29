@@ -1,7 +1,6 @@
 package com.example.eduhelper;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,12 +11,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class Marks_Calculation extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
      private EditText num1;
      private EditText num2;
      private Button cal;
-     private TextView result;
+     private TextView result, goToGpaCal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class Marks_Calculation extends AppCompatActivity implements AdapterView.
         num2 = (EditText) findViewById(R.id.ent2);
         cal = (Button) findViewById(R.id.btncal);
         result = (TextView) findViewById(R.id.tvans);
+        goToGpaCal = findViewById(R.id.gpaCalc);
 
         cal.setOnClickListener(new View.OnClickListener() {
 
@@ -52,6 +54,12 @@ public class Marks_Calculation extends AppCompatActivity implements AdapterView.
             }
         });
 
+        goToGpaCal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),GPACalculator.class));
+            }
+        });
 
     }
 
