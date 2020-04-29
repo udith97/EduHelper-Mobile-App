@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         PastPaperBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Marks_Calculation.class));
+                startActivity(new Intent(getApplicationContext(),RetrivePastpaperData.class));
             }
         });
 
