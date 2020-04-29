@@ -42,9 +42,6 @@ public class GPACalculator extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //double number1 = Double.parseDouble(num1.getText().toString());
-//                double sum = 45 - (number1+number2);
-//                result.setText("Answer :" + String.valueOf(sum));
 
                 double M1GP = Double.parseDouble(M1gp.getText().toString());
                 double M1CH = Double.parseDouble(M1ch.getText().toString());

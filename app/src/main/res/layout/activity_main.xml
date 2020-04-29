@@ -49,6 +49,7 @@
         android:id="@+id/announcementBtn"
         android:layout_width="140dp"
         android:layout_height="131dp"
+        android:layout_marginEnd="36dp"
         android:layout_marginBottom="284dp"
         android:background="@drawable/announcement_icon"
         app:layout_constraintBottom_toBottomOf="parent"
