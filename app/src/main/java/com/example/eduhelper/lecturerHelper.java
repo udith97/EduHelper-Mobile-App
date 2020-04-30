@@ -7,7 +7,6 @@ public class lecturerHelper {
     private String location;
     private String  email;
     private String contact;
-    //private String image;
 
     public lecturerHelper() {
     }
@@ -61,11 +60,4 @@ public class lecturerHelper {
         this.contact = contact;
     }
 
-//    public String getImage() {
-//        return image;
-//    }
-//
-//    public void setImage(String image) {
-//        this.image = image;
-//    }
 }

@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Add_Lecturers extends AppCompatActivity {
 
-    private static final int PICK_IMG_REQUEST = 1;
+    //private static final int PICK_IMG_REQUEST = 1;
     EditText lecturerName, lecturerModule, lecturerLocation, lecturerEmail, lecturerContact;
     Button insertBtn;
 
