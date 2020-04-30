@@ -30,7 +30,7 @@ public class DownpdfPaper extends AppCompatActivity {
         PastpaperHelper helper = new PastpaperHelper();
 
         String fileName = System.currentTimeMillis()+"";
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("paperPDFfolder");
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("pastPaperPDF");
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
