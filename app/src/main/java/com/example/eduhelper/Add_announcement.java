@@ -141,8 +141,6 @@ public class Add_announcement extends AppCompatActivity {
 
 
 
-
-//        final EditText Input = findViewById(R.id.in1);
         final Button Clear = findViewById(R.id.clearBtn);
 
         Clear.setOnClickListener(new View.OnClickListener() {
@@ -202,14 +200,14 @@ public class Add_announcement extends AppCompatActivity {
         progressDialog.show();;
 
 
-        final String fileName = System.currentTimeMillis()+ "";
+        final String fileName = ref;
         StorageReference storageReference = storage.getReference();
         storageReference.child("announcement").child(fileName).putFile(urifile).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 String url = taskSnapshot.getUploadSessionUri().toString();
                 mDatabase = rootNode.getReference();
-                mDatabase.child("announcementPDF").child(String.valueOf(ref)).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
+                mDatabase.child("announcementPDF").child(ref).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
 
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
