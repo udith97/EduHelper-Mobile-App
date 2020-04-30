@@ -197,7 +197,7 @@
                 android:layout_marginLeft="70dp"
                 android:layout_marginRight="70dp"
                 android:text="@string/btn_calculate"
-                android:background="@drawable/custom_button3"/>
+                android:background="@drawable/custom_button10"/>
 
             <Space
                 android:layout_width="match_parent"
