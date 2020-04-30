@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class PaperUpdate extends AppCompatActivity {
 
     EditText up_year, up_moduleCode, up_semester, up_faculty, up_exam;
-    Button uploadbtn;
+    Button updatebtn;
     String year, moduleCode, semester, faculty, exam;
 
     @Override
@@ -29,7 +29,7 @@ public class PaperUpdate extends AppCompatActivity {
         up_faculty = findViewById(R.id.upfacpp);
         up_exam = findViewById(R.id.upexampp);
 
-        uploadbtn = findViewById(R.id.upbtnpp);
+        updatebtn = findViewById(R.id.upbtnpp);
 
         Intent intent = getIntent();
         year = intent.getStringExtra("iyear");
@@ -49,7 +49,7 @@ public class PaperUpdate extends AppCompatActivity {
 
 
 
-        uploadbtn.setOnClickListener(new View.OnClickListener() {
+        updatebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("pastPapers").child(year);

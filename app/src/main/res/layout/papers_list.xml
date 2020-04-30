@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/holderview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:background="@color/common_google_signin_btn_text_light_default"
         card_view:cardBackgroundColor="@android:color/transparent"

@@ -155,7 +155,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="85dp"
                 android:layout_marginRight="65dp"
-                android:background="@drawable/custom_button3"
+                android:background="@drawable/custom_button10"
                 android:text="@string/update" />
 
             <Space

@@ -11,80 +11,74 @@
         android:id="@+id/lecturerBtn"
         android:layout_width="140dp"
         android:layout_height="131dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/lecturer_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintEnd_toStartOf="@+id/timeTableBtn"
+        app:layout_constraintHorizontal_bias="0.327"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/timeTableBtn"
         android:layout_width="140dp"
         android:layout_height="131dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="44dp"
         android:background="@drawable/timetable_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.613"
-        app:layout_constraintStart_toEndOf="@+id/button10"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/pastPaperBtn"
         android:layout_width="140dp"
         android:layout_height="131dp"
-        android:layout_marginBottom="344dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/pastpapers_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintEnd_toStartOf="@+id/announcementBtn"
+        app:layout_constraintHorizontal_bias="0.317"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button10"
-        app:layout_constraintVertical_bias="0.158" />
+        app:layout_constraintTop_toBottomOf="@+id/lecturerBtn" />
 
     <Button
         android:id="@+id/announcementBtn"
         android:layout_width="140dp"
         android:layout_height="131dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="344dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="44dp"
         android:background="@drawable/announcement_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.613"
-        app:layout_constraintStart_toEndOf="@+id/button13"
-        app:layout_constraintTop_toBottomOf="@+id/button11"
-        app:layout_constraintVertical_bias="0.155" />
+        app:layout_constraintTop_toBottomOf="@+id/timeTableBtn" />
 
     <Button
         android:id="@+id/calBtn"
         android:layout_width="140dp"
         android:layout_height="131dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="150dp"
         android:background="@drawable/cal_icon"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintEnd_toStartOf="@+id/button16"
+        app:layout_constraintHorizontal_bias="0.327"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button13"
-        app:layout_constraintVertical_bias="0.317" />
+        app:layout_constraintTop_toBottomOf="@+id/pastPaperBtn" />
 
     <Button
         android:id="@+id/button16"
         android:layout_width="140dp"
         android:layout_height="131dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="148dp"
         android:background="@drawable/sem_cal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.752"
-        app:layout_constraintStart_toEndOf="@+id/button15"
-        app:layout_constraintTop_toBottomOf="@+id/button14"
-        app:layout_constraintVertical_bias="0.321" />
+        app:layout_constraintTop_toBottomOf="@+id/announcementBtn" />
 
     <Button
         android:id="@+id/button17"
