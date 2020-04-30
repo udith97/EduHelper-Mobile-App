@@ -19,8 +19,8 @@ import java.util.ArrayList;
 
 public class LecturerAdapterClass extends RecyclerView.Adapter<LecturerAdapterClass.MyViewHolder>{
 
-    private Context context;
-    private ArrayList<lecturerHelper> lecHelper;
+     Context context;
+     ArrayList<lecturerHelper> lecHelper;
 
     public LecturerAdapterClass(Context c,ArrayList<lecturerHelper> lecHelper){
         this.context = c;
@@ -88,5 +88,6 @@ public class LecturerAdapterClass extends RecyclerView.Adapter<LecturerAdapterCl
             UpdateBtn = itemView.findViewById(R.id.updateBtn);
 
         }
+
     }
 }

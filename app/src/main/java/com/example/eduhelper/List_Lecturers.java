@@ -48,7 +48,9 @@ public class List_Lecturers<searchView> extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),Add_Lecturers.class));
             }
         });
+
     }
+
 
     ValueEventListener valueEventListener = new ValueEventListener() {
         @Override
@@ -67,7 +69,7 @@ public class List_Lecturers<searchView> extends AppCompatActivity {
         }
 
 
-
     };
+
 
 }

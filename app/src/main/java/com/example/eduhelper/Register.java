@@ -70,7 +70,7 @@ public class Register extends AppCompatActivity {
                     rPassword.setError("Password is required.");
                     return;
                 }if (password.length() < 6){
-                    rPassword.setError("Password mus be greater than six characters.");
+                    rPassword.setError("Password must be greater than six characters.");
                     return;
                 }
 

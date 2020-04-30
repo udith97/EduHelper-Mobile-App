@@ -18,13 +18,7 @@
         <activity android:name=".Add_announcement" />
         <activity android:name=".UpdateData" />
         <activity android:name=".announcement_list" />
-        <activity android:name=".RetrivePastpaperData" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".RetrivePastpaperData" />
         <activity android:name=".PaperUpdate" />
         <activity android:name=".UpdateDataTimetable" />
         <activity android:name=".TimetableAdapterClass" />
