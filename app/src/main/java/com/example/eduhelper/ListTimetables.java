@@ -24,7 +24,7 @@ public class ListTimetables extends AppCompatActivity {
     private ArrayList<timetablehelper> thelper;
     private  RecyclerView recyclerView;
     private TimetableAdapterClass timetableAdapterClass;
-    private Button goInsert;
+    private Button goInsert, downloadpdf;
     SearchView searchView;
 
     @Override
@@ -33,6 +33,7 @@ public class ListTimetables extends AppCompatActivity {
         setContentView(R.layout.activity_list_timetables);
 
         goInsert = findViewById(R.id.btn_ins);
+        downloadpdf = findViewById(R.id.down_pdf);
 
 
         recyclerView = findViewById(R.id.rv1);
@@ -43,6 +44,13 @@ public class ListTimetables extends AppCompatActivity {
         ref.addListenerForSingleValueEvent(valueEventListener);
 
         searchView = findViewById(R.id.searchView);
+
+       downloadpdf.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               startActivity(new Intent(ListTimetables.this, Downpdf_timetable.class));
+           }
+       });
 
         goInsert.setOnClickListener(new View.OnClickListener() {
             @Override
