@@ -168,7 +168,7 @@
                     android:layout_marginLeft="80dp"
                     android:layout_marginRight="15dp"
 
-                    android:background="@color/common_google_signin_btn_text_dark_focused"
+                    android:background="@drawable/custom_button7"
                     android:text="DELETE"
                     android:textAllCaps="false"
                     android:textColor="#fff" />
@@ -179,7 +179,7 @@
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:layout_marginRight="15dp"
-                    android:background="#000"
+                    android:background="@drawable/custom_button6"
                     android:text="UPDATE"
                     android:textAllCaps="false"
                     android:textColor="#fff" />
