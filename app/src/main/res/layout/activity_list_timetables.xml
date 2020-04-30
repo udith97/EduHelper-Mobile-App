@@ -20,11 +20,25 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv1"
-        android:background="@drawable/bck_bck"
         android:layout_width="match_parent"
-        android:layout_height="494dp"
+        android:layout_height="427dp"
         android:layout_margin="5dp"
+        android:background="@drawable/bck_bck"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <Button
+        android:id="@+id/down_pdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/browse_button"
+        android:text="@string/downloadpdf"
+        android:textSize="18sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="14dp" />
 
     <Button
         android:id="@+id/btn_ins"
