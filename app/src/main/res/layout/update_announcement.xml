@@ -37,14 +37,15 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/u_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="354dp"
+                    android:layout_height="44dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:fontFamily="@font/aclonica"
                     android:hint="@string/title"
                     android:textAllCaps="false"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@drawable/text_view"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <Space
@@ -58,11 +59,12 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/u_fac"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="354dp"
+                    android:layout_height="44dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:fontFamily="@font/aclonica"
+                    android:background="@drawable/text_view"
                     android:hint="@string/faculty"
                     android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -79,11 +81,12 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/u_yr"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="354dp"
+                    android:layout_height="44dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:fontFamily="@font/aclonica"
+                    android:background="@drawable/text_view"
                     android:hint="@string/txt_yr"
                     android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -99,11 +102,12 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/u_des"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="354dp"
+                    android:layout_height="44dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:fontFamily="@font/aclonica"
+                    android:background="@drawable/text_view"
                     android:hint="@string/des"
                     android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -129,6 +133,7 @@
                 android:id="@+id/u_update"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_button9"
                 android:layout_marginLeft="70dp"
                 android:layout_marginRight="70dp"
                 android:text="@string/update" />

@@ -22,7 +22,7 @@ public class announcement_list extends AppCompatActivity {
     private RecyclerView rv;
     private ArrayList<announcementHelper>annData;
     private AnnAdapter annAdapter;
-    private Button insertTimetable;
+    private Button insertAnnouncement;
 
     DatabaseReference ref;
 
@@ -31,7 +31,7 @@ public class announcement_list extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_announcement_list);
 
-        insertTimetable = findViewById(R.id.goToInsertAnn);
+        insertAnnouncement = findViewById(R.id.goToInsertAnn);
         rv = findViewById(R.id.recycle1);
         rv.setLayoutManager(new LinearLayoutManager(this));
         annData = new ArrayList<announcementHelper>();
@@ -39,7 +39,7 @@ public class announcement_list extends AppCompatActivity {
         ref = FirebaseDatabase.getInstance().getReference().child("announcement");
         ref.addListenerForSingleValueEvent(valueEventListener);
 
-        insertTimetable.setOnClickListener(new View.OnClickListener() {
+        insertAnnouncement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),Add_announcement.class));

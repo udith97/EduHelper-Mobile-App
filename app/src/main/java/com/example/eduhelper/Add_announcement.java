@@ -141,8 +141,6 @@ public class Add_announcement extends AppCompatActivity {
 
 
 
-
-//        final EditText Input = findViewById(R.id.in1);
         final Button Clear = findViewById(R.id.clearBtn);
 
         Clear.setOnClickListener(new View.OnClickListener() {
