@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -76,6 +77,25 @@ public class AddTimetable extends AppCompatActivity {
                String tyear = year.getText().toString();
                String tsemester = semester.getText().toString();
                String tgroup = group.getText().toString();
+
+                if(TextUtils.isEmpty(tfaculty)){
+                    faculty.setError("Faculty is required.");
+                    return;
+                }
+                if(TextUtils.isEmpty(tyear)){
+                    year.setError("Faculty is required.");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(tsemester)){
+                    semester.setError("Faculty is required.");
+                    return;
+                }
+                if(TextUtils.isEmpty(tgroup)){
+                    group.setError("Faculty is required.");
+                    return;
+                }
+
 
                 ref = tyear;
                 tyear = ref;

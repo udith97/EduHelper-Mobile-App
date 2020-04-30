@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -76,6 +77,26 @@ public class Add_announcement extends AppCompatActivity {
                 String annYear = year.getText().toString();
                 String annFac = faculty.getText().toString();
                 String annDes = description.getText().toString();
+
+                if(TextUtils.isEmpty(annTitle)) {
+                    title.setError("Title is required.");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(annFac)) {
+                    faculty.setError("Faculty is required.");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(annYear)) {
+                    year.setError("Year is required.");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(annDes)) {
+                    description.setError("Description is required.");
+                    return;
+                }
 
                 ref = annTitle;
                 annTitle = ref;
