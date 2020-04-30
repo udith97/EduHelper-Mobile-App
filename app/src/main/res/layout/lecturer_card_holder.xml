@@ -7,6 +7,7 @@
     android:layout_margin="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="25dp"
+    app:cardCornerRadius="8dp"
     tools:ignore="MissingDefaultResource">
 
     <LinearLayout
@@ -72,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
             android:layout_marginRight="100dp"
-            android:background="@drawable/custom_button3"
+            android:background="@drawable/custom_button4"
             android:text="@string/update" />
 
         <Space
@@ -85,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
             android:layout_marginRight="100dp"
-            android:background="@drawable/custom_button3"
+            android:background="@drawable/custom_button4"
             android:text="@string/delete" />
 
 
