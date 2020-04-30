@@ -44,6 +44,7 @@ public class Insert_P_Paper extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private FirebaseStorage storage;
     private static String ref;
+    private   static String module;
 
 
 
@@ -88,6 +89,8 @@ public class Insert_P_Paper extends AppCompatActivity {
                 ref = iyear;
                 iyear = ref;
 
+                module = mcode;
+                mcode = module;
 
 
                 PastpaperHelper paperHelper = new PastpaperHelper(iyear, sem, mcode, ifac, iexam);
@@ -108,12 +111,12 @@ public class Insert_P_Paper extends AppCompatActivity {
             }
         });
 
-        downloadpdf.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Insert_P_Paper.this, PaperPDFAdapter.class));
-            }
-        });
+//        downloadpdf.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(Insert_P_Paper.this, PaperPDFAdapter.class));
+//            }
+//        });
 
 
         choosefile.setOnClickListener(new View.OnClickListener() {
@@ -182,8 +185,8 @@ public class Insert_P_Paper extends AppCompatActivity {
         progressDialog.setProgress(0);
         progressDialog.show();
 
-        final String fileName = System.currentTimeMillis()+".pdf";
-        final String fileName1 = System.currentTimeMillis()+ "";
+        final String fileName =  module;         //System.currentTimeMillis()+".pdf";
+//        final String fileName1 = System.currentTimeMillis()+ "";
         StorageReference storageReference = storage.getReference();
         storageReference.child("Past_Papers").child(fileName).putFile(fileUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -192,7 +195,7 @@ public class Insert_P_Paper extends AppCompatActivity {
 
                       String url = taskSnapshot.getUploadSessionUri().toString();
                       mDatabase = rootNode.getReference();
-                      mDatabase.child(fileName1).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
+                      mDatabase.child("pastPaperPDF").child(module).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
 
                           @Override
                           public void onComplete(@NonNull Task<Void> task) {

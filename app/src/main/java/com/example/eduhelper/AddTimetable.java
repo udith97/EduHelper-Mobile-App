@@ -45,6 +45,7 @@ public class AddTimetable extends AppCompatActivity {
     private FirebaseStorage storage;
     private static String ref;
     private TextView message;
+    private static String module;
 
 
     @Override
@@ -77,6 +78,7 @@ public class AddTimetable extends AppCompatActivity {
                String tyear = year.getText().toString();
                String tsemester = semester.getText().toString();
                String tgroup = group.getText().toString();
+
 
                 if(TextUtils.isEmpty(tfaculty)){
                     faculty.setError("Faculty is required.");
@@ -129,11 +131,23 @@ public class AddTimetable extends AppCompatActivity {
             }
         });
 
+//        upload.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(urifile != null) {
+//
+//                }
+//            }
+//        });
+
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (urifile != null) {
                     uploadPdf();
+                }
+                else{
+                    Toast.makeText(AddTimetable.this,"Select a file to uploasd",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -201,14 +215,14 @@ public class AddTimetable extends AppCompatActivity {
         progressDialog.show();;
 
 
-        final String fileName = System.currentTimeMillis()+ "";
+        final String fileName = ref;
         StorageReference storageReference = storage.getReference();
         storageReference.child("TimeTable").child(fileName).putFile(urifile).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 String url = taskSnapshot.getUploadSessionUri().toString();
                 mDatabase = rootNode.getReference();
-                mDatabase.child("TimetabelPDF").child(String.valueOf(ref)).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
+                mDatabase.child("TimetabelPDF").child(ref).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
 
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

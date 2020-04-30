@@ -1,50 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="@drawable/pastpaperbackground"
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/holderview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/holderview"
         android:layout_margin="5dp"
-        card_view:cardElevation="4dp"
+        android:background="@color/common_google_signin_btn_text_light_default"
+        card_view:cardBackgroundColor="@android:color/transparent"
         card_view:cardCornerRadius="8dp"
-        card_view:cardUseCompatPadding="true"
-        >
+        card_view:cardElevation="4dp"
+        card_view:cardUseCompatPadding="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/white"
             android:orientation="vertical">
 
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/year_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Year"
-            android:padding="5dp"
-            android:textSize="16dp"
-            android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/year_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Year"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
 
-        <TextView
-            android:id="@+id/pyear_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="data"
-            android:padding="5dp"
-            android:textStyle="bold"
-            android:textSize="16dp"/>
+                <TextView
+                    android:id="@+id/pyear_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="data"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -58,22 +60,23 @@
                     android:id="@+id/moduleC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Module Code"
                     android:padding="5dp"
+                    android:text="Module Code"
                     android:textSize="16dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
 
                 <TextView
                     android:id="@+id/module_C"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="data"
                     android:padding="5dp"
-                    android:textStyle="bold"
-                    android:textSize="16dp"/>
+                    android:text="data"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -83,20 +86,20 @@
                     android:id="@+id/vsems"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Semester"
                     android:padding="5dp"
+                    android:text="Semester"
                     android:textSize="16dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
 
                 <TextView
                     android:id="@+id/vsem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="data"
                     android:padding="5dp"
-                    android:textStyle="bold"
-                    android:textSize="16dp"/>
+                    android:text="data"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -109,22 +112,23 @@
                     android:id="@+id/vfacs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="faculty"
                     android:padding="5dp"
+                    android:text="faculty"
                     android:textSize="16dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
 
                 <TextView
                     android:id="@+id/vfac"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="data"
                     android:padding="5dp"
-                    android:textStyle="bold"
-                    android:textSize="16dp"/>
+                    android:text="data"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -134,58 +138,56 @@
                     android:id="@+id/vexamd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="exam"
                     android:padding="5dp"
+                    android:text="exam"
                     android:textSize="16dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
 
                 <TextView
                     android:id="@+id/vexam"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="data"
                     android:padding="5dp"
-                    android:textStyle="bold"
-                    android:textSize="16dp"/>
+                    android:text="data"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
-            
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
 
-
                 <Button
                     android:id="@+id/vdeletebtn"
                     android:layout_width="100dp"
                     android:layout_height="40dp"
-                    android:text="DELETE"
-                    android:background="#000"
+                    android:layout_marginLeft="80dp"
                     android:layout_marginRight="15dp"
-                    android:textColor="#fff"
-                    android:textAllCaps="false"/>
+
+                    android:background="@color/common_google_signin_btn_text_dark_focused"
+                    android:text="DELETE"
+                    android:textAllCaps="false"
+                    android:textColor="#fff" />
 
 
                 <Button
                     android:id="@+id/vupdate"
                     android:layout_width="100dp"
                     android:layout_height="40dp"
-                    android:text="UPDATE"
-                    android:background="#000"
-                    android:textColor="#fff"
                     android:layout_marginRight="15dp"
-                    android:textAllCaps="false"/>
+                    android:background="#000"
+                    android:text="UPDATE"
+                    android:textAllCaps="false"
+                    android:textColor="#fff" />
 
             </LinearLayout>
 
 
-
         </LinearLayout>
-
-
 
 
     </androidx.cardview.widget.CardView>

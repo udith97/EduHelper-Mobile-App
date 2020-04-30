@@ -14,53 +14,53 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class PaperPDFAdapter extends RecyclerView.Adapter<PaperPDFAdapter.PdfViewpaperH> {
+public class TimetablePDFadapter extends RecyclerView.Adapter<TimetablePDFadapter.pdftimetable> {
     RecyclerView recyclerViewpdf;
     Context context;
-    ArrayList<String> pdfpapers = new ArrayList<>();
+    ArrayList<String> pdftimetable = new ArrayList<>();
     ArrayList<String> urlPdf = new ArrayList<>();
 
 
-    public void updatepdf(String name, String Url){
-        pdfpapers.add(name);
+    public void updatepPDFt(String name, String Url){
+        pdftimetable.add(name);
         urlPdf.add(Url);
         notifyDataSetChanged();// refreshes recycle view automatically
     }
 
 
-    public PaperPDFAdapter(RecyclerView recyclerViewpdf, Context context, ArrayList<String> pdfpapers, ArrayList<String> urlPdf) {
+    public TimetablePDFadapter(RecyclerView recyclerViewpdf, Context context, ArrayList<String> pdftimetable, ArrayList<String> urlPdf) {
         this.recyclerViewpdf = recyclerViewpdf;
         this.context = context;
-        this.pdfpapers = pdfpapers;
+        this.pdftimetable = pdftimetable;
         this.urlPdf = urlPdf;
     }
 
     @NonNull
     @Override
-    public PdfViewpaperH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.pastpapers_pdf, parent,false);
-        return new PdfViewpaperH(view);
+    public pdftimetable onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.timetableitem, parent,false);
+        return new pdftimetable(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PdfViewpaperH holder, int position) {
+    public void onBindViewHolder(@NonNull pdftimetable holder, int position) {
 
-        holder.filename.setText(pdfpapers.get(position));
+        holder.filename.setText(pdftimetable.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return pdfpapers.size();
+        return pdftimetable.size();
     }
 
-    public class PdfViewpaperH extends RecyclerView.ViewHolder{
+    public class pdftimetable extends RecyclerView.ViewHolder{
 
         TextView filename;
 
-        public PdfViewpaperH(@NonNull View itemView) {
+        public pdftimetable(@NonNull View itemView) {
             super(itemView);
 
-            filename = itemView.findViewById(R.id.paperfilename);
+            filename = itemView.findViewById(R.id.tfilename);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @SuppressLint("IntentReset")
                 @Override

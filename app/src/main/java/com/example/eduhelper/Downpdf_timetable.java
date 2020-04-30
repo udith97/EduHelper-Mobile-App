@@ -1,48 +1,45 @@
 package com.example.eduhelper;
 
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-import io.grpc.LoadBalancer;
-
-public class DownpdfPaper extends AppCompatActivity {
+public class Downpdf_timetable extends AppCompatActivity {
 
     RecyclerView rview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_downpdf_paper);
-        PastpaperHelper helper = new PastpaperHelper();
+        setContentView(R.layout.activity_downpdf_timetable);
+        timetablehelper helper = new timetablehelper();
 
         String fileName = System.currentTimeMillis()+"";
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("pastPaperPDF");
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("TimetabelPDF");
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
-            try {
-                String filename = dataSnapshot.getKey();
-                String url = dataSnapshot.getValue(String.class);
+                try {
+                    String filename = dataSnapshot.getKey();
+                    String url = dataSnapshot.getValue(String.class);
 
-                ((PaperPDFAdapter) rview.getAdapter()).updatepdf(filename, url);
-            }catch(Exception e){
-                System.out.println("print Error");
-            }
+                    ((TimetablePDFadapter) rview.getAdapter()).updatepPDFt(filename, url);
+                }catch(Exception e){
+                    System.out.println("print Error");
+                }
 
 
 //                String x = dataSnapshot.getKey();
@@ -71,10 +68,10 @@ public class DownpdfPaper extends AppCompatActivity {
             }
         });
 
-        rview = findViewById(R.id.pdfrecyclepaper);
+        rview = findViewById(R.id.pdfrecycletimetable);
 
-        rview.setLayoutManager(new LinearLayoutManager(DownpdfPaper.this));
-        PaperPDFAdapter paperPDFAdapter = new PaperPDFAdapter(rview,DownpdfPaper.this, new ArrayList<String>(), new ArrayList<String>());
-        rview.setAdapter(paperPDFAdapter);
+        rview.setLayoutManager(new LinearLayoutManager(Downpdf_timetable.this));
+        TimetablePDFadapter timetablePDFadapter = new TimetablePDFadapter(rview, Downpdf_timetable.this, new ArrayList<String>(), new ArrayList<String>());
+        rview.setAdapter(timetablePDFadapter);
     }
 }

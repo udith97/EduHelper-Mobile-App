@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DownpdfPaper">
-
+    tools:context=".Downpdf_timetable">
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/pdfrecyclepaper"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/pdfrecycletimetable"
         android:layout_margin="10dp"
-        android:background="@drawable/pastpaperbackground">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     </androidx.recyclerview.widget.RecyclerView>
 
