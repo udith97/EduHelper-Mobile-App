@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="@drawable/pastpaperbackground"
     android:orientation="vertical"
-    tools:context=".PaymentDetails"
-    android:layout_margin="10dp">
+    tools:context=".PaymentDetails">
 
     <EditText
         android:id="@+id/semfee"
@@ -14,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
         android:ems="10"
+        android:fontFamily="@font/krona_one"
         android:hint="@string/semester_fees"
         android:inputType="textPersonName"
         android:textAlignment="center"
@@ -21,15 +23,16 @@
         android:textStyle="bold" />
 
     <EditText
-    android:id="@+id/currentyear"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:ems="10"
-    android:hint="@string/Current_year"
-    android:inputType="textPersonName"
-    android:layout_marginLeft="50dp"
-    android:layout_marginRight="50dp"
-    android:textAlignment="center" />
+        android:id="@+id/currentyear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:ems="10"
+        android:fontFamily="@font/krona_one"
+        android:hint="@string/Current_year"
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/semcurrent"
@@ -39,6 +42,7 @@
         android:layout_marginTop="18dp"
         android:layout_marginRight="50dp"
         android:ems="10"
+        android:fontFamily="@font/krona_one"
         android:hint="@string/currentSem"
         android:inputType="textPersonName"
         android:textAlignment="center" />
@@ -65,7 +69,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:background="@color/cardview_dark_background"
+                android:background="@drawable/common_google_signin_btn_text_dark_normal_background"
+                android:fontFamily="@font/gruppo"
                 android:text="@string/TotalPayment"
                 android:textColor="@color/cardview_light_background"
                 android:textSize="20dp"
@@ -76,10 +81,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:textSize="20dp"
-                android:textStyle="bold"
+                android:layout_marginRight="20dp"
                 android:textAlignment="center"
-                android:layout_marginRight="20dp"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
 
             <TextView
@@ -87,7 +92,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:background="@color/cardview_dark_background"
+                android:background="@drawable/common_google_signin_btn_text_dark_normal_background"
+                android:fontFamily="@font/gruppo"
                 android:text="Payment for a year"
                 android:textColor="@color/cardview_light_background"
                 android:textSize="20dp"
@@ -99,10 +105,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:textSize="20dp"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                 />
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
 
             <TextView
@@ -110,7 +115,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:background="@color/cardview_dark_background"
+                android:background="@drawable/common_google_signin_btn_text_dark_normal_background"
+                android:fontFamily="@font/gruppo"
                 android:text="payment for three months"
                 android:textColor="@color/cardview_light_background"
                 android:textSize="20dp"
@@ -122,10 +128,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:textSize="20dp"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                 />
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
 
             <TextView
@@ -133,7 +138,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:background="@color/cardview_dark_background"
+                android:background="@drawable/common_google_signin_btn_text_dark_normal_background"
+                android:fontFamily="@font/gruppo"
                 android:text="Remaining amount to be paid "
                 android:textColor="@color/cardview_light_background"
                 android:textSize="20dp"
@@ -145,10 +151,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:textSize="20dp"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                />
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
             <Space
                 android:layout_width="match_parent"

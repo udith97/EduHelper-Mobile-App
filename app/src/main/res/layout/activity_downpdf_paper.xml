@@ -5,11 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DownpdfPaper">
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/pdfrecyclepaper"
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/pastpaperbackground">
 
     </androidx.recyclerview.widget.RecyclerView>
 

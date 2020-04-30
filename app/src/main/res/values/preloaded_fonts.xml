@@ -2,6 +2,8 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/aclonica</item>
+        <item>@font/archivo_black</item>
+        <item>@font/bungee</item>
         <item>@font/coustard</item>
         <item>@font/gruppo</item>
         <item>@font/marvel_bold</item>

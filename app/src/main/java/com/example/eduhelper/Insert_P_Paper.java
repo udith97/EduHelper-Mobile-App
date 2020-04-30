@@ -111,12 +111,12 @@ public class Insert_P_Paper extends AppCompatActivity {
             }
         });
 
-        downloadpdf.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Insert_P_Paper.this, PaperPDFAdapter.class));
-            }
-        });
+//        downloadpdf.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(Insert_P_Paper.this, PaperPDFAdapter.class));
+//            }
+//        });
 
 
         choosefile.setOnClickListener(new View.OnClickListener() {
