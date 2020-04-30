@@ -52,6 +52,7 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.PaperHolder>
         holder.pMcode.setText(pastpaperHelper.getModuleCode());
         holder.pfac.setText(pastpaperHelper.getFaculty());
         holder.pexam.setText(pastpaperHelper.getExam());
+
         holder.deletebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,7 +63,7 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.PaperHolder>
             }
         });
 
-        holder.uploadbtn.setOnClickListener(new View.OnClickListener() {
+        holder.updatebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent x = new Intent(v.getContext(), PaperUpdate.class);
@@ -89,7 +90,7 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.PaperHolder>
     public class PaperHolder extends  RecyclerView.ViewHolder{
 
         TextView pyear, pMcode,psem, pfac, pexam;
-        Button deletebtn, uploadbtn , viewbtnpp;
+        Button deletebtn, updatebtn , viewbtnpp;
         CardView cardView;
 
         public PaperHolder(@NonNull View itemView) {
@@ -103,7 +104,7 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.PaperHolder>
             pfac = itemView.findViewById(R.id.vfac);
             deletebtn = itemView.findViewById(R.id.vdeletebtn);
             cardView = itemView.findViewById(R.id.holderview);
-            uploadbtn = itemView.findViewById(R.id.vupdate);
+            updatebtn = itemView.findViewById(R.id.vupdate);
 
 
             viewbtnpp = itemView.findViewById(R.id.upbtnpp);

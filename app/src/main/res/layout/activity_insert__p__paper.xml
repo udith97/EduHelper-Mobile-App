@@ -130,6 +130,10 @@
                 android:background="@drawable/custom_button6"
                 android:text="@string/ChooseFile" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
             <Button
                 android:id="@+id/ipupload"
                 android:layout_width="match_parent"

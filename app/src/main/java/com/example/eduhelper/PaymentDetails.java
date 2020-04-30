@@ -3,6 +3,7 @@ package com.example.eduhelper;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,6 +46,9 @@ public class PaymentDetails extends AppCompatActivity {
          double seminput = Double.parseDouble(semester_amount.getText().toString());
          double currenty = Double.parseDouble(current_year.getText().toString());
          double currents = Double.parseDouble(current_sem.getText().toString());
+
+
+
 
 
 

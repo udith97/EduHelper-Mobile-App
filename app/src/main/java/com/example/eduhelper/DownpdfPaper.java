@@ -27,9 +27,7 @@ public class DownpdfPaper extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_downpdf_paper);
-        PastpaperHelper helper = new PastpaperHelper();
 
-        String fileName = System.currentTimeMillis()+"";
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("pastPaperPDF");
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -91,6 +92,30 @@ public class Insert_P_Paper extends AppCompatActivity {
 
                 module = mcode;
                 mcode = module;
+
+
+                if(TextUtils.isEmpty(iyear)){
+                    year.setError("Year is required.");
+                    return;
+                }
+                if(TextUtils.isEmpty(sem)){
+                    semester.setError("Semester is required.");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(mcode)){
+                    moduleCode.setError("Module Code is required.");
+                    return;
+                }
+                if(TextUtils.isEmpty(ifac)){
+                    faculty.setError("Faculty is required.");
+                    return;
+                }
+                if(TextUtils.isEmpty(iexam)){
+                    exam.setError("Exam is required.");
+                    return;
+                }
+
 
 
                 PastpaperHelper paperHelper = new PastpaperHelper(iyear, sem, mcode, ifac, iexam);
@@ -185,8 +210,7 @@ public class Insert_P_Paper extends AppCompatActivity {
         progressDialog.setProgress(0);
         progressDialog.show();
 
-        final String fileName =  module;         //System.currentTimeMillis()+".pdf";
-//        final String fileName1 = System.currentTimeMillis()+ "";
+        final String fileName =  module;
         StorageReference storageReference = storage.getReference();
         storageReference.child("Past_Papers").child(fileName).putFile(fileUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -220,7 +244,6 @@ public class Insert_P_Paper extends AppCompatActivity {
             public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
                 int currentProgress = (int) (100*taskSnapshot.getBytesTransferred()/taskSnapshot.getTotalByteCount());
                 progressDialog.setProgress(currentProgress);
-//                startActivity(new Intent(getApplicationContext(), ViewPastPapers.class));
 
             }
 
