@@ -44,6 +44,7 @@ public class Insert_P_Paper extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private FirebaseStorage storage;
     private static String ref;
+    private   static String module;
 
 
 
@@ -88,6 +89,8 @@ public class Insert_P_Paper extends AppCompatActivity {
                 ref = iyear;
                 iyear = ref;
 
+                module = mcode;
+                mcode = module;
 
 
                 PastpaperHelper paperHelper = new PastpaperHelper(iyear, sem, mcode, ifac, iexam);
@@ -183,7 +186,7 @@ public class Insert_P_Paper extends AppCompatActivity {
         progressDialog.show();
 
         final String fileName = System.currentTimeMillis()+".pdf";
-        final String fileName1 = System.currentTimeMillis()+ "";
+//        final String fileName1 = System.currentTimeMillis()+ "";
         StorageReference storageReference = storage.getReference();
         storageReference.child("Past_Papers").child(fileName).putFile(fileUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -192,7 +195,7 @@ public class Insert_P_Paper extends AppCompatActivity {
 
                       String url = taskSnapshot.getUploadSessionUri().toString();
                       mDatabase = rootNode.getReference();
-                      mDatabase.child(fileName1).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
+                      mDatabase.child(module).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
 
                           @Override
                           public void onComplete(@NonNull Task<Void> task) {

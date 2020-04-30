@@ -102,4 +102,8 @@
     <string name="downloadpdf">Download PDF</string>
     <string name="cal_text">You need to below amount of marks to pass the module </string>
     <string name="goToCalcGpa"><![CDATA[Need Calculate your GPA? --->]]></string>
+    <string name="semester_fees">Input semester fees</string>
+    <string name="Current_year">Current Year</string>
+    <string name="TotalPayment">Total Payment For the course</string>
+    <string name="currentSem">Current semester</string>
 </resources>

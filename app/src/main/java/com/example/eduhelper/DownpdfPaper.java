@@ -30,18 +30,18 @@ public class DownpdfPaper extends AppCompatActivity {
         PastpaperHelper helper = new PastpaperHelper();
 
         String fileName = System.currentTimeMillis()+"";
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("paperPDFfolder");
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
-                try {
-                    String filename = dataSnapshot.getKey();
-                    String url = dataSnapshot.getValue(String.class);
+            try {
+                String filename = dataSnapshot.getKey();
+                String url = dataSnapshot.getValue(String.class);
 
-                    ((PaperPDFAdapter) rview.getAdapter()).updatepdf(filename, url);
-                }catch (Exception e){
-                    System.out.println("Error");
+                ((PaperPDFAdapter) rview.getAdapter()).updatepdf(filename, url);
+            }catch(Exception e){
+                System.out.println("print Error");
             }
 
 

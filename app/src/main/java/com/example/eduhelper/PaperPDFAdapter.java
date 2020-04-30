@@ -1,5 +1,6 @@
 package com.example.eduhelper;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -61,6 +62,7 @@ public class PaperPDFAdapter extends RecyclerView.Adapter<PaperPDFAdapter.PdfVie
 
             filename = itemView.findViewById(R.id.paperfilename);
             itemView.setOnClickListener(new View.OnClickListener() {
+                @SuppressLint("IntentReset")
                 @Override
                 public void onClick(View view) {
 

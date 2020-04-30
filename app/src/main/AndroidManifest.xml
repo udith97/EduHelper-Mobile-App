@@ -12,12 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DownpdfPaper" />
         <activity android:name=".GPACalculator"/>
         <activity android:name=".Update_announcement" />
         <activity android:name=".Add_announcement" />
         <activity android:name=".UpdateData" />
         <activity android:name=".announcement_list" />
-        <activity android:name=".RetrivePastpaperData" />
+        <activity android:name=".RetrivePastpaperData" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".PaperUpdate" />
         <activity android:name=".UpdateDataTimetable" />
         <activity android:name=".TimetableAdapterClass" />
@@ -26,7 +33,13 @@
         <activity android:name=".Marks_Calculation" />
         <activity android:name=".ListTimetables" />
         <activity android:name=".Edit_Past_past_paper" />
-        <activity android:name=".Insert_P_Paper" />
+        <activity android:name=".Insert_P_Paper" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".EditTimetable" />
         <activity android:name=".AddTimetable" />
         <activity android:name=".EditProfile" />
@@ -39,6 +52,14 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".Register" />
+        <activity android:name=".PaymentDetails" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
 
         <meta-data
             android:name="preloaded_fonts"
