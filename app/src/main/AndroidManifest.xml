@@ -30,7 +30,7 @@
         <activity android:name=".Marks_Calculation" />
         <activity android:name=".ListTimetables" />
         <activity android:name=".Edit_Past_past_paper" />
-        <activity android:name=".Insert_P_Paper"/>
+        <activity android:name=".Insert_P_Paper" />
         <activity android:name=".EditTimetable" />
         <activity android:name=".AddTimetable" />
         <activity android:name=".EditProfile" />
@@ -44,7 +44,6 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".Register" />
         <activity android:name=".PaymentDetails"/>
-
 
         <meta-data
             android:name="preloaded_fonts"
