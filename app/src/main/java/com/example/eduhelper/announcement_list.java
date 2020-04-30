@@ -22,7 +22,7 @@ public class announcement_list extends AppCompatActivity {
     private RecyclerView rv;
     private ArrayList<announcementHelper>annData;
     private AnnAdapter annAdapter;
-    private Button insertAnnouncement;
+    private Button insertAnnouncement,dwnloadPdf;
 
     DatabaseReference ref;
 
@@ -32,12 +32,21 @@ public class announcement_list extends AppCompatActivity {
         setContentView(R.layout.activity_announcement_list);
 
         insertAnnouncement = findViewById(R.id.goToInsertAnn);
+        dwnloadPdf = findViewById(R.id.pdfdwn);
+
         rv = findViewById(R.id.recycle1);
         rv.setLayoutManager(new LinearLayoutManager(this));
         annData = new ArrayList<announcementHelper>();
 
         ref = FirebaseDatabase.getInstance().getReference().child("announcement");
         ref.addListenerForSingleValueEvent(valueEventListener);
+
+        dwnloadPdf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(announcement_list.this, DwnPDF_ann.class));
+            }
+        });
 
         insertAnnouncement.setOnClickListener(new View.OnClickListener() {
             @Override
